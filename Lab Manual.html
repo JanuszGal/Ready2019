@@ -1,4 +1,13 @@
-<h1>Shifting to a Modern Desktop (StaMD)<br />
+<style>
+p {
+margin-left: 15px;
+}
+
+img {
+border: 1px solid #000000;
+}
+</style>
+<h1>Shifting to a Modern Desktop<br />
 </h1>
 
 <h2><a name="_Toc397503478"></a>Exercise 1: Enable Intune Device Management</h2>
@@ -7,13 +16,13 @@
 
 <p>2. Start Internet Explorer InPrivate mode.</p>
 
-<p>3. Navigate to <a href="https://portal.azure.com/">https://portal.azure.com</a> and Sign in with labadmin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<p>3. Navigate to <a href="https://portal.azure.com/">https://portal.azure.com</a> and sign in with labadmin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
 
 <p>4. On the left navigation bar, click All Services &gt; Intune.<br />
-<br />
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/1%20intune%20portal.png">
-</p>
+ </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/1%20intune%20portal.png" width="100%">
 
+<br /> <br/>
 <p>5. Select the orange banner to open the Mobile Device Management Authority setting.</p>
 
 <p>6. Under Mobile Device Management Authority, select Intune MDM Authority.</p>
@@ -21,93 +30,86 @@
 <p>7. On the left navigation bar, click Azure Active Directory.</p>
 
 <p>8. Click Mobility (MDM and MAM) &gt; Microsoft Intune &gt; and select All for MDM user scope.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/2%20mdm%20enrollment.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/2%20mdm%20enrollment.png" width="100%">
 
 <p>9. Return to the Mobility (MDM and MAM) page and select Microsoft Intune Enrollment. Select All for the MDM user scope.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/3%20mdm%20enrollment%20again.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/3%20mdm%20enrollment%20again.png" width="100%">
 
+<!--Next Exercise
+-->
 <h2>Exercise 2: Create Groups for Autopilot</h2>
 
 <p>10. On the left navigation bar, click Azure Active Directory &gt; Groups &gt; All groups.</p>
 
-<p>11. Click + New group.<br />
+<p>11. Click + New group. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/4%20groups.png" width="100%"> 
 <br />
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/4%20groups.png">
+<br />
+<p>12. In the Group pane fill in the following values:
+<ul>
+<li> <b>Group Type</b>: Office 365 </li> 
+<li> <b>Group Name</b>: Autopilot Users</li> 
+<li> <b>Membership Type</b>: Assigned</li> 
+<li> <b>Members</b>: Adam Wallen and Betsy Drake</li> 
+</ul>
 </p>
 
-<p>12. In the Group pane fill in the following values:</p>
-
-<p>a. Group Type: Office 365</p>
-
-<p>b. Group Name: Autopilot Users</p>
-
-<p>c. Membership Type: Assigned</p>
-
-<p>d. Members: Adam Wallen and Betsy Drake</p>
-<p><br />
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/4%20adding%20members%20to%20groups.png">
-<br />
-</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/4%20adding%20members%20to%20groups.png" width="100%">
+<br /><br />
 
 <p>13. Click Create.</p>
 
-<p>14. In the All Groups pane, open the Autopilot Users group and click Licenses. Click + Assign, click Products, and select Enterprise Mobility + Security E5 and Office 365 Enterprise E5.<br />
-<br />
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/5%20licensing.png">
-<br />
-</p>
+<p>14. In the All Groups pane, open the Autopilot Users group and click Licenses. Click + Assign, click Products, and select Enterprise Mobility + Security E5 and Office 365 Enterprise E5.</p>
 
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/5%20licensing.png" width="100%">
+<br /><br />
 <p>15. Create another group with the following values:</p>
-
-<p>a. Group type: Security</p>
-
-<p>b. Group name: Autopilot Devices</p>
-
-<p>c. Membership type: Dynamic Device</p>
-
-<p>d. For the Dynamic membership rule, click the Advanced rule button and enter the following: <br />
-(device.devicePhysicalIDs -any _ -contains "[ZTDId]")</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/6%20autopilot%20dynamic.png">
+<ul>
+<li> <b>Group Type</b>: Security</li> 
+<li> <b>Group Name</b>: Autopilot Devices</li> 
+<li> <b>Membership Type</b>: Dynamic Device</li> 
+<li> <b>For the Dynamic membership rule, click the Advanced rule button and enter the following</b>: (device.devicePhysicalIDs -any _ -contains "[ZTDId]")</li> 
+</ul>
+</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/6%20autopilot%20dynamic.png" width="100%">
 
 <p>16. Click Create</p>
 
 <br />
+
+<!--Next Exercise
+-->
 <h2>Exercise 3: Configure Branding</h2>
 
 <p>1. Start Internet Explorer InPrivate mode.</p>
 
-<p>2. Navigate to <a href="https://portal.azure.com/">https://portal.azure.com</a> and Sign in with labadmin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<p>2. Navigate to <a href="https://portal.azure.com/">https://portal.azure.com</a> and sign in with labadmin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
 
 <p>3. On the left navigation bar, click Azure Active Directory.</p>
 
 <p>4. Select Company branding.</p>
 
 <p>5. Configure the following with settings you choose for your lab:</p>
+<ul>
+<li> Sign-in page background image </li>
+<li> Banner logo</li>
+<li> Username hint</li>
+<li> Sign-in page text</li>
+<li> Sign-in page background color</li>
+<li> Square logo image</li>
+<li> Square logo image, dark theme</li>
+</ul>
 
-<p>a. Sign-in page background image</p>
-
-<p>b. Banner logo</p>
-
-<p>c. Username hint</p>
-
-<p>d. Sign-in page text</p>
-
-<p>e. Sign-in page background color</p>
-
-<p>f. Square logo image</p>
-
-<p>g. Square logo image, dark theme</p>
-
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/7%20branding.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/7%20branding.png" width="100%"> <br/>
 
 <p>6. Click Save.<br />
 </p>
 
 <p>7. Return to the Azure Active Directory pane and click Properties. Enter a name for the Directory:</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/8%20tenant%20name.png" width="100%">
 
-<br />
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/8%20tenant%20name.png">
-
+<!--Next Exercise
+-->
 <h2>Exercise 4: Configure Autopilot Settings</h2>
 
 <p>1. Start Internet Explorer InPrivate mode.</p>
@@ -120,51 +122,48 @@
 
 <p>5. Select Enrollment Status Page (Preview). On the Enrollment Status Page pane, select the Default profile. Click Settings, then select Yes for "Show app and profile installation progress" and Yes for "Block device until all apps and profiles are installed"</p>
 <br/> 
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/9%20enrollment%20status%20screen.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/9%20enrollment%20status%20screen.png" width="100%">
 <p>6. Click Save</p>
 
 <p>7. Back on the Windows enrollment pane, click "Deployment profiles"</p>
 
 <p>8. Create a new profile and enter the following settings:</p>
+<ul>
+<li> <b> Profile Name</b>: Autopilot Standard Users</li>
+<li> <b> Deployment mode</b>: User-Driven</li>
+<li> <b> Join to Azure AD as</b>: Azure AD joined</li>
+<li> <b> Out-of-box-experience</b>: 
+	<ul>
+	<li> <b> End user license agreement (EULA)</b>: </li>
+	<li> <b> Privacy Settings</b>: Hide</li>
+	<li> <b> Hide change account options</b>: Hide</li>
+	<li> <b> User account type</b>: Standard</li>
+	<li> <b> Apply computer name template (Windows Insider only)</b>: Yes</li>
+	<li> <b> Enter a name</b>: Contoso-%RAND:4%</li>
+	</ul>
+</li>
+</ul>
 
-<p>a. Profile Name: Autopilot Standard Users</p>
+<p>9. Select the profile from the Deployment profiles pane. Click Assignments, and select the Autopilot Devices Group.</p>
 
-<p>b. Deployment mode: User-Driven</p>
-
-<p>c. Join to Azure AD as: Azure AD joined</p>
-
-<p>d. Out-of-box-experience: </p>
-
-<p>i. End user license agreement (EULA): Hide</p>
-
-<p>ii. Privacy Settings: Hide</p>
-
-<p>iii. Hide change account options: Hide</p>
-
-<p>iv. User account type: Standard</p>
-
-<p>v. Apply computer name template (Windows Insider only): Yes</p>
-
-<p>vi. Enter a name: Contoso-%RAND:4%</p>
-
-<p>9. Select the profile from the Deployment profiles pane. Click Assignments, and select the Autopilot Devices Group.<br />
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/10%20autopilot%20assignment.png" width="100%">
 <br />
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/10%20autopilot%20assignment.png">
 <br />
-</p>
 
 <p>10. Click save.</p>
 
+<!--Next Exercise
+-->
 <h2>Exercise 5: Capture and Upload Device ID</h2>
 
 <p>1. Connect to HYD-Client5</p>
 
 <p>2. Press Shift+F10 to open CMD prompt </p>
 
-<p>3. Type "PowerShell" to begin a PowerShell session<br />
-<br />
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/11%20device%20id.png">
-</p>
+<p>3. Type "PowerShell" to begin a PowerShell session</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/11%20device%20id.png" width="100%"> 
+
+<br /><br />
 
 <p>4. Run "Set-ExecutionPolicy Bypass" </p>
 
@@ -183,8 +182,11 @@
 <p>11. Click Devices and then click Import. Click the file icon and select the mycomputer.csv file located on C:\.</p>
 
 <p>12. Click Import.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/12%20upload%20device%20id.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/12%20upload%20device%20id.png" width="100%">
 <b><br />
+
+<!--Next Exercise
+-->
 </b><h2>Exercise 6: Configure compliance and configuration settings in Intune</h2>
 
 <p>13. Connect to HYD-SCCM</p>
@@ -198,60 +200,57 @@
 <p>17. Click Device compliance &gt; Policies &gt; + Create Policy</p>
 
 <p>18. In the Create Policy pane, enter the following information:</p>
+<ul>
+<li> <b> Name</b>: Autopilot Compliance Policy</li>
+<li> <b> Platform</b>: Windows 10 and later</li>
+<li> <b> Settings > System Security</b>: set Encryption of data storage on device to Require</li>
+</ul>
 
-<p>a. Name: Autopilot Compliance Policy</p>
 
-<p>b. Platform: Windows 10 and later</p>
-
-<p>c. Settings: System Security &gt; set Encryption of data storage on device to Require</p>
-
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/12%20compliance%20settings.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/12%20compliance%20settings.png" width="100%">
 <br />
 
 <p>19. Click Create.</p>
 
 <p>20. On the Autopilot Compliance Policy pane, click Assignments and assign the policy to the Autopilot Users group.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/14%20assign%20compliance.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/14%20assign%20compliance.png" width="100%">
 <br/>
 <p>21. Click Save.</p>
 
 <p>22. Back on the Intune pane, click Device configuration &gt; Profiles &gt; + Create profile.</p>
 
 <p>23. On the Create profile pane, enter the following information: </p>
-
-<p>a. Name: Windows 10 - BitLocker</p>
-
-<p>b. Platform: Windows 10 and later</p>
-
-<p>c. Profile type: Custom</p>
+<ul>
+<li> <b> Name</b>:Windows 10 - BitLocker</li>
+<li> <b> Platform</b>: Windows 10 and later</li>
+<li> <b> Profile type</b>: Custom</li>
+</ul>
 
 <p>24. Under settings, add the 2 following BitLocker CSP settings:</p>
+<ul>
+<li> <b> BitLocker Standard User Encryption </b>
+<ul>
+<li> <b> OMA-URI</b>: ./Device/Vendor/MSFT/BitLocker/AllowStandardUserEncryption</li>
+<li> <b> Data type</b>: Integer</li>
+<li> <b> Value</b>: 1</li>
+</ul>
+</ul>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/15%20standard%20user%20encrpytion.png" width="100%">
 
-<p>a. BitLocker Standard User Encryption</p>
+<ul>
+<li> <b> BitLocker Warning Prompt </b>
+<ul>
+<li> <b> OMA-URI</b>: ./Device/Vendor/MSFT/BitLocker/AllowWarningForOtherDiskEncryption</li>
+<li> <b> Data type</b>: Integer</li>
+<li> <b> Value</b>: 0</li>
+</ul>
+</ul>
 
-<p>i. Name: Bitlocker Standard User Encryption</p>
-
-<p>ii. OMA-URI: ./Device/Vendor/MSFT/BitLocker/AllowStandardUserEncryption</p>
-
-<p>iii. Data type: Integer</p>
-
-<p>iv. Value: 1</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/15%20standard%20user%20encrpytion.png">
-
-<p>b. BitLocker Warning Prompt</p>
-
-<p>i. Name: BitLocker Warning Prompt</p>
-
-<p>ii. OMA-URI: ./Device/Vendor/MSFT/BitLocker/AllowWarningForOtherDiskEncryption</p>
-
-<p>iii. Data type: Integer</p>
-
-<p>iv. Value: 0</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/16%20standard%20user%20encryption%20warning.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/16%20standard%20user%20encryption%20warning.png" width="100%">
 
 <p>25. On the Create profile pane click Create.</p>
 
-<p>26. Select the “Windows 10 – BitLocker” profile and assign it to the Autopilot Users group.</p>
+<p>26. Select the "Windows 10 – BitLocker" profile and assign it to the Autopilot Users group.</p>
 
 <p>27. Click + Create profile. On the Create profile pane, enter the following information: </p>
 
@@ -263,12 +262,15 @@
 
 <p>28. Click Create.</p>
 
-<p>29. On the Windows 10 – OneDrive device profile pane, select settings. Type “OneDrive” into the search bar and select “Enable OneDrive Files On-Demand.” Click Enabled.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/17%20admx%20onedrive.png">
+<p>29. On the Windows 10 - OneDrive device profile pane, select settings. Type "OneDrive" into the search bar and select "Enable OneDrive Files On-Demand." Click Enabled.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/17%20admx%20onedrive.png" width="100%">
 
 <p>30. Click Assignments and assign the profile to the Autopilot Users group.</p>
 
 <br />
+
+<!-- New Exercise
+-->
 <h2>Exercise 7: App deployment </h2>
 
 <p>1. Connect to HYD-SCCM</p>
@@ -282,34 +284,34 @@
 <p>5. Click Client apps &gt; Microsoft Store for Business</p>
 
 <p>6. Click Enable and Save.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/18%20store%20for%20business.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/18%20store%20for%20business.png" width="100%">
 
-<p>7. Click the “Open the business store” link (or navigate to <a href="https://businessstore.microsoft.com/">https://businessstore.microsoft.com</a>)</p>
+<p>7. Click the "Open the business store" link (or navigate to <a href="https://businessstore.microsoft.com/">https://businessstore.microsoft.com</a>)</p>
 
-<p>8. Click the “Sign-in” button in the top right.</p>
+<p>8. Click the "Sign-in" button in the top right.</p>
 
-<p>9. Click “accept” for the Microsoft Store for Business EULA prompt.</p>
+<p>9. Click "accept" for the Microsoft Store for Business EULA prompt.</p>
 
 <p>10. Click Manage &gt; Settings &gt; Distribute. Select Activate for Microsoft Intune and Microsoft Intune Enrollment.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/19%20store%20for%20business%20activate.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/19%20store%20for%20business%20activate.png" width="100%">
 
-<p>11. In the “Search the store” search bar, type in “Xbox.” Select the first Xbox app.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/20%20xbox.png">
+<p>11. In the "Search the store" search bar, type in "Xbox." Select the first Xbox app.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/20%20xbox.png" width="100%">
 
-<p>12. Click “Get the app” on the Xbox app page. Approve the EULA popup.</p>
+<p>12. Click "Get the app" on the Xbox app page. Approve the EULA popup.</p>
 
-<p>13. Back in the Intune portal, click “Sync” to sync the app purchase.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/21%20store%20for%20business%20sync.png">
+<p>13. Back in the Intune portal, click "Sync" to sync the app purchase.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/21%20store%20for%20business%20sync.png" width="100%">
 
 <p>14. Click Apps. Verify that Xbox shows up as a Microsoft Store for Business app. </p>
 
-<p>15. Click on the Xbox app and select assignments. Click “Add group.” Under “Assignment type” select “Uninstall.” Click Included groups and select the Autopilot Users group.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/22%20xbox%20assignments.png">
+<p>15. Click on the Xbox app and select assignments. Click "Add group." Under "Assignment type" select "Uninstall." Click Included groups and select the Autopilot Users group.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/22%20xbox%20assignments.png" width="100%">
 <br />
 <p>16. Open the following URL: <a href="https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool">https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool</a></p>
 
-<p>17. Click the green dropdown labeled “Clone or download” and then click Download ZIP.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/23%20win32%20github.png">
+<p>17. Click the green dropdown labeled "Clone or download" and then click Download ZIP.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/23%20win32%20github.png" width="100%">
 
 <p>18. Open the following URL: <a href="https://go.skype.com/windows.desktop.download">https://go.skype.com/windows.desktop.download</a>. This will begin a download for Skype (in .exe format). </p>
 
@@ -322,16 +324,16 @@
 <p>22. For the setup file, enter: "C:\Users\Administrator\Downloads\Intune-Win32-App-Packaging-Tool-master\Apps\Skype-8.37.0.98.exe"</p>
 
 <p>23. For the output folder, enter: "C:\Users\Administrator\Downloads\Intune-Win32-App-Packaging-Tool-master\Apps/"</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/24%20win32%20packaging.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/24%20win32%20packaging.png" width="100%">
 
 <p>24. Press enter to package the app.</p>
 
 <p>25. Back in the Intune portal, select Apps and +Add. </p>
 
-<p>26. For App type, enter “Windows app (Win32) – preview”</p>
+<p>26. For App type, enter "Windows app (Win32) - preview"</p>
 
 <p>27. For the app package file, select the Skype .intunewin file that was created. </p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/25%20win32%20upload.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/25%20win32%20upload.png" width="100%">
 
 <p>28. Under app information, enter the following information:</p>
 
@@ -341,20 +343,20 @@
 
 <p>29. For program, enter the following information:</p>
 
-<p>a. Install command: Skype-8.37.0.98.exe</p>
+<p>a. Install command: Skype-8.37.0.98.exe /verysilent </p>
 
 <p>b. Uninstall command: Skype-8.37.0.98.exe /uninstall</p>
 
-<p>c. Uninstall behavior: System</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/26%20win32%20configure.png">
+<p>c. Install behavior: System</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/26%20win32%20configure.png" width="100%">
 
 <p>30. Under requirements, select 32-bit and 64-bit for Operating System Architecture and Windows 10 1607 for Minimum operating system.</p>
 
-<p>31. Under detection rules, select “Manually configure detection rules.” Click Add. Type in the following information for the detection rule:</p>
+<p>31. Under detection rules, select "Manually configure detection rules." Click Add. Type in the following information for the detection rule:</p>
 
 <p>a. Rule type: File</p>
 
-<p>b. Path: C:\Program Files (x86)\Microsoft\Skype for Desktop</p>
+<p>b. Path: "C:\Program Files (x86)\Microsoft\Skype for Desktop\"</p>
 
 <p>c. File or folder: "C:\Program Files (x86)\Microsoft\Skype for Desktop\Skype.exe"</p>
 
@@ -363,17 +365,17 @@
 <p>32. Click Ok twice and Add.</p>
 
 <p>33. Once the app is uploaded, select Assignments and assign it to the Autopilot Users group as required.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/27%20win32%20assignment.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/27%20win32%20assignment.png" width="100%">
 
 <p>34. Open the following URL to download an .msi for Power BI Desktop: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=45331">https://www.microsoft.com/en-us/download/details.aspx?id=45331</a> </p>
 
 <p>35. Select the PBIDesktop.msi option and click next:</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/28%20powerbi%20download.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/28%20powerbi%20download.png" width="100%">
 
 <p>36. Back in the Intune portal, select Apps and click +Add. </p>
 
 <p>37. For app type, select “Line-of-business app”. In the app package file section select the PBIDesktop.msi.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/29%20powerbi%20upload.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/29%20powerbi%20upload.png" width="100%">
 
 <p>38. Under App information, enter the following information:</p>
 
@@ -381,9 +383,14 @@
 
 <p>b. Publisher: Microsoft</p>
 
+<p>c. Command Line Arguements:  ACCEPT_EULA=1 </p>
+
 <p>39. Click Add and then assign the app to the Autopilot users group as required.</p>
 
 <br />
+
+<!-- New Exercise
+-->
 <h2>Exercise 8: Configure Office 365 Deployment</h2>
 
 <p>1. Connect to HYD-SCCM</p>
@@ -399,7 +406,7 @@
 <p>6. Under App type, select Office 365 Suite &gt; Windows 10.</p>
 
 <p>7. Select the following applications under Configure App Suite: Excel, OneDrive Desktop, Outlook, PowerPoint, Word</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/30%20o365%20configuration.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/30%20o365%20configuration.png" width="100%">
 
 <p>8. Under App Suite Information, provide the following information: </p>
 
@@ -408,11 +415,14 @@
 <p>b. Suite Description: Microsoft Office 365</p>
 
 <p>9. Under App Suite Settings, select the Monthly update channel.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/31%20o365%20channel.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/31%20o365%20channel.png" width="100%">
 
 <p>10. Click Add and assign the app to the Autopilot Users group as required.</p>
 
 <br />
+
+<!-- New Exercise
+-->
 <h2>Exercise 9: Configure Updates</h2>
 
 <p>1. Connect to HYD-SCCM</p>
@@ -427,12 +437,13 @@
 
 <p>6. Enter the following information on the Create Update Ring pane:</p>
 
-<p>a. Name: Windows 10 – Semi-Annual Channel</p>
+<p>a. Name: Windows 10 - Semi-Annual Channel</p>
 
 <p>b. Settings: </p>
 
 <p>i. Servicing channel: Semi-Annual Channel</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/32%20win10%20channel.png"
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/32%20win10%20channel.png" width="100%">
+
 <br/> 
 <p>7. Click Create. </p>
 
@@ -449,19 +460,22 @@
 <p>4. Click Skip for the second keyboard layout prompt</p>
 
 <p>5. Verify that the tenant branding shows up on the Account login screen:</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/33%20autopilot%20step%201.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/33%20autopilot%20step%201.png" width="100%">
 
 <p>6. Log into the device using <a>Adamw@&lt;azuredomain&gt;.onmicrosoft.com</a></p>
 
 <p>7. Confirm the device is enrolling into Intune by seeing the Enrollment Status Screen:</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/34%20autopilot%20step%202.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/34%20autopilot%20step%202.png" width="100%">
 
-<p>8. Click “Set up PIN” and when the Hello prompt pops up, click X and select “Skip for now.”</p>
+<p>8. Click “"Set up PIN" and when the Hello prompt pops up, click X and select "Skip for now."</p>
 
 <p>9. Open the Settings app and navigate to Accounts &gt; Access work or school. Verify that the device is connected to your tenant name.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/35%20autopilot%20step%203.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/35%20autopilot%20step%203.png" width="100%">
 
 <br />
+
+<!-- New Exercise
+-->
 <h2>Exercise 11: Set up Co-management</h2>
 
 <p>1. Connect to HYD-AD</p>
@@ -543,12 +557,15 @@
 <p>36. Upload the <strong>ccmsetup.msi</strong> app package file. Find this file in the following folder on the Configuration Manager site server: <code>&lt;ConfigMgr installation directory&gt;\bin\i386</code>.</p>
 
 <p>37. After the app is updated, configure the app information with the command line that you copied from Configuration Manager.</p>
-
+<!--
 <p>38. Follow this article</p>
 
 <p>39. <a href="https://docs.microsoft.com/en-us/sccm/core/clients/manage/cmg/setup-cloud-management-gateway">https://docs.microsoft.com/en-us/sccm/core/clients/manage/cmg/setup-cloud-management-gateway</a> <br />
 </p>
+-->
 
+<!-- New Exercise
+-->
 <h2>Exercise 12: Install Intune Connector for Hybrid AD</h2>
 
 <p>1. Make sure that you have a language pack installed and configured as described in <a href="https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector" data-linktype="external">Intune Connector (Preview) language requirements</a>.</p>
@@ -568,6 +585,9 @@
 <p>8. Go to <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> and confirm the connection status is <strong>Active</strong>.</p>
 
 <br />
+
+<!-- New Exercise
+-->
 <h2>Exercise 13: Autopilot a hybrid AD device</h2>
 
 <p>1. In <a href="https://aka.ms/intuneportal" data-linktype="external">Intune</a>, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Deployment Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
@@ -609,16 +629,19 @@
 <p>15. To assign the profile, follow the steps under <href="#assign-a-device-profile" data-linktype="relative-path">Assign a device profile</a>.</p>
 
 <br />
+
+<!-- New Exercise
+-->
 <h2>Exercise 14: Using Autopilot Reset</h2>
 
 <p>16. Connect to HYD-SCCM</p>
 
 <p>17. Log into the Intune portal</p>
 
-<p>18. Locate the device</p>
+<p>18. Click on Devices > Contoso-%rand:4% </p>
 
-<p>19. Click …more and select AutoPilot Reset</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/36%20autopilot%20reset.png">
+<p>19. Click ...more and select AutoPilot Reset</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/36%20autopilot%20reset.png" width="100%">
 
 <b><br />
 </b><h2>Exercise 15: Exporting settings as a .json file</h2>
@@ -638,7 +661,7 @@
 <p>7. All of your Device Configurations will be downloaded</p>
 
 <p>8. Send the contents of the Output folder to a compressed ZIP folder and upload to your Teams site or a OneDrive location for storage.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/37%20json%20export.png">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/37%20json%20export.png" width="100%">
 
 <p>9. Start an elevated PowerShell session</p>
 
@@ -650,7 +673,7 @@
 
 <p>13. Authenticate to the Intune Tenant where you want to import your configuration</p>
 
-<p>14. You will be asked to enter the configuration file for import enter <i>“C:\PSHELL\Output\CustomDevicePolicy.json”</i></p>
+<p>14. You will be asked to enter the configuration file for import enter <i>"C:\PSHELL\Output\CustomDevicePolicy.json"</i></p>
 
 <p>15. Log into or refresh your Intune Device Configuration session and verify you now see the profile. (note the profile will not be assigned. </p>
 
