@@ -550,80 +550,96 @@ border: 1px solid #000000;
 <p>33. Under <strong>Other</strong>, select <strong>Line-of-business app</strong>.</p>
 <p>34. Select the folder icon and browse to C:\Program File\Microsoft Configuration Manager\bin\i386.Select the <strong>ccmsetup.msi</strong> app package file.</p>
 <p>35. Under App information, type in: <br/>Description: <b>ConfigMgr Client Setup Bootstrap</b><br/>Publisher: <b> Microsoft </b> </p>
-<p>36. Add the following Command-line arguments: <br/> <code> ccmsetup.exe /mp:CM1 /logon SMSSITECODE=CM1 FSP=CM1 </code>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/44%20workloads.jpg" width="100%">	
+<p>36. Add the following Command-line arguments: <br/> <code> ccmsetup.exe /mp:CM1 /logon SMSSITECODE=CM1 FSP=CM1 </code>	
 <p>37. Click Add to upload the app to Intune. </p>
-<p>39. Click Ok and then click Add. Once the app is uploaded, select Putty release 0.70 from the Client Apps - Apps pane. Select Assignments, click <b> Add group </b>, select Assignment type <b> Required </b>, click Included Groups and select the <b> Autopilot Users </b> group.</p> 
+<p>39. Click Ok and then click Add. Once the app is uploaded, select ConfigMgr Client Setup Bootstrap from the Client Apps - Apps pane. Select Assignments, click <b> Add group </b>, select Assignment type <b> Required </b>, click Included Groups and select the <b> Autopilot Users </b> group.</p> 
 
 <!-- New Exercise
 -->
 <h2>Exercise 12: Install Intune Connector for Hybrid AD</h2>
-
-<p>1. Make sure that you have a language pack installed and configured as described in <a href="https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector" data-linktype="external">Intune Connector (Preview) language requirements</a>.</p>
-
-<p>2. In <a href="https://aka.ms/intuneportal" data-linktype="external">Intune</a>, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> &gt; <strong>Add connector</strong>.</p>
-
-<p>3. Follow the instructions to download the connector.</p>
-
+<!--
+<p>2. In Intune, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> &gt; <strong>click Add</strong>.</p>
+<p>3. Click the link to download the connector.</p>
 <p>4. Open the downloaded connector setup file to install the connector (ODJConnectorBootstrapper.exe).</p>
-
-<p>5. At the end of setup, choose <strong>Configure</strong>.</p>
-
-<p>6. Choose <strong>Sign In</strong>.</p>
-
-<p>7. Enter user Global Administrator or Intune Administrator role credentials.</p>
-
-<p>8. Go to <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> and confirm the connection status is <strong>Active</strong>.</p>
-
+-->
+<p>1. Open the Downloads folder and run the ODJConnectorBootstrapper.exe </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/45%20connector.jpg" width="100%">
+<p>2. Click the check box and select Install. </p>
+<p>3. Approve the UAC elevation. </p>
+<p>4. At the end of setup, choose <strong>Configure now</strong>.</p>
+<p>5. Choose <strong>Sign In</strong> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/46%20signinconnector.jpg" width="100%">
+<p>6. Open Internet Explorer and go to <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> and confirm the connection status is <strong>Active</strong>.</p>
 <br />
 
 <!-- New Exercise
 -->
-<h2>Exercise 13: Autopilot a hybrid AD device</h2>
+<h2>Exercise 13: Configure Autopilot for a hybrid AD device</h2>
 
-<p>1. In <a href="https://aka.ms/intuneportal" data-linktype="external">Intune</a>, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Deployment Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
+<p>1. In Intune, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Deployment Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
 
-<p>2. Type a <strong>Name</strong> and optional <strong>Description</strong>.</p>
+<p>2. Create a new profile and enter the following settings:</p>
+<ul>
+<li> <b> Profile Name</b>: Autopilot Standard Users Hybrid</li>
+<li> <b> Deployment mode</b>: User-Driven</li>
+<li> <b> Join to Azure AD as</b>: Hybrid Azure AD joined (Preview)</li>
+<li> <b> Out-of-box-experience</b>: 
+	<ul>
+	<li> <b> End user license agreement (EULA)</b>: </li>
+	<li> <b> Privacy Settings</b>: Hide</li>
+	<li> <b> Hide change account options</b>: Hide</li>
+	<li> <b> User account type</b>: Standard</li>
+	<li> <b> Apply computer name template (Windows Insider only)</b>: No</li>
+	</ul>
+</li>
+</ul>
+<p> Click Create.<br /></p> 
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/48%20profilehybrid.jpg" width="100%">
 
-<p>3. For <strong>Deployment mode</strong>, choose <strong>User-driven</strong>.</p>
+<p>3. Select the profile from the Deployment profiles pane. Click Assignments, and select the Autopilot Devices Group.</p>
+<p>4. In the Windows Autopilot deployment profiles pane, select the <b> Autopilot Standard Users </b> profile. Click Assignments, and select the ... icon to remove the Autopilot Devices Group. </p>
 
-<p>4. In the <strong>Join to Azure AD as</strong> box, choose <strong>Hybrid Azure AD joined (Preview)</strong>.</p>
-
-<p>5. Choose <strong>Out-of-box experience (OOBE)</strong>, configure the options as needed, and then choose <strong>Save</strong>.</p>
-
-<p>6. Choose <strong>Create</strong> to create the profile.</p>
-
-<p>7. In the profile blade, choose <strong>Assignments</strong>.</p>
-
-<p>8. Choose <strong>Select groups</strong> &gt; in the <strong>Select groups</strong> blade, choose the device group &gt; <strong>Select</strong>.</p>
-
-<p>9. Exclude the other device group here, and allow user account to be Admin</p>
-
-<p>10. It will take around 15 minutes for the device profile status to change from <strong>Not assigned</strong> to <strong>Assigning</strong> and finally to <strong>Assigned</strong>.</p>
-
-<p>11. In <a href="https://aka.ms/intuneportal" data-linktype="external">Intune</a>, choose <strong>Device configuration</strong> &gt; <strong>Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
-
-<p>12. Enter the following properties: </p>
-
-<p>a. <strong>Name</strong>: Enter a descriptive name for the new profile.</p>
-
-<p>b. <strong>Description</strong>: Enter a description for the profile.</p>
-
-<p>c. <strong>Platform</strong>: Choose <strong>Windows 10 and later</strong>.</p>
-
+<p>5. In Intune, choose <strong>Device configuration</strong> &gt; <strong>Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
+<p>6. Enter the following properties: </p>
+<p>a. <strong>Name</strong>: Windows 10 - Autopilot Hybrid AAD </p>
+<p>b. <strong>Platform</strong>: Choose <strong>Windows 10 and later</strong>.</p>
 <p>d. <strong>Profile type</strong>: Choose <strong>Domain Join (Preview)</strong>.</p>
 
-<p>13. Choose <strong>Settings</strong> and provide a <strong>Computer name prefix</strong>, <strong>Domain name</strong>, and (optional) <strong>Organizational unit</strong> in <href="#distinguished-name" data-linktype="external">DN format</a>.</p>
+<p>7. Choose <strong>Settings</strong> and provide a <strong>Computer name prefix</strong>: Contoso, <strong>Domain name</strong>: corp.contoso.com</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/49%20odjprofile.jpg" width="100%">
+<p>8. Choose <strong>OK</strong> &gt; <strong>Create</strong>. </p>
+<p>9. Click Assignments click the Select groups to include option, and select the <b> Autopilot Users </b> group to assign the profile.</p>
+<p> Click save. </p>
+<br />
 
-<p>14. Choose <strong>OK</strong> &gt; <strong>Create</strong>. The profile is created, and appears in the list.</p>
+<h2>Exercise 14: Autopilot a Hybrid AAD device</h2>
 
-<p>15. To assign the profile, follow the steps under <href="#assign-a-device-profile" data-linktype="relative-path">Assign a device profile</a>.</p>
+<p>1. Connect to HYD-Client6 and Restart the machine by clicking the lightning bolt &gt; Power &gt; Reset/Reboot Machine</p>
+
+<p>2. Select United States for the region and click Yes</p>
+
+<p>3. Select US for the keyboard layout and click Yes</p>
+
+<p>4. Click Skip for the second keyboard layout prompt</p>
+
+<p>5. Verify that the tenant branding shows up on the Account login screen:</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/33%20autopilot%20step%201.png" width="100%">
+
+<p>6. Log into the device using PradeepG@&lt;azuredomain&gt;.onmicrosoft.com</p>
+
+<p>7. Confirm the device is enrolling into Intune by seeing the Enrollment Status Screen:</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/34%20autopilot%20step%202.png" width="100%">
+
+<p>8. Click “"Set up PIN" and when the Hello prompt pops up, click X and select "Skip for now."</p>
+
+<p>9. Open the Settings app and navigate to Accounts &gt; Access work or school. Verify that the device is connected to your tenant name.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/35%20autopilot%20step%203.png" width="100%">
 
 <br />
 
 <!-- New Exercise
 -->
-<h2>Exercise 14: Using Autopilot Reset</h2>
+<h2>Exercise 15: Using Autopilot Reset</h2>
 
 <p>16. Connect to HYD-SCCM</p>
 
@@ -635,7 +651,7 @@ border: 1px solid #000000;
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/36%20autopilot%20reset.png" width="100%">
 
 <b><br />
-</b><h2>Exercise 15: Exporting settings as a .json file</h2>
+</b><h2>Exercise 16: Exporting settings as a .json file</h2>
 
 <p>1. In order to successfully export your settings. Please download the latest Intune PowerShell scripts from <a href="https://github.com/microsoftgraph/powershell-intune-samples">here</a> (download and expand the ZIP file):</p>
 
@@ -672,7 +688,7 @@ border: 1px solid #000000;
 
 <p>17. Repeat process for each JSON file you want to import.</p>
 
-<h2>Exercise 16: Autopilot troubleshooting steps</h2>
+<h2>Exercise 17: Autopilot troubleshooting steps</h2>
 
 <p>1. Shift+F10 for CMD prompt</p>
 
