@@ -171,7 +171,7 @@ border: 1px solid #000000;
 <br /><br />
 
 <p>4. Run <br/> 
-	Set-ExecutionPolicy Bypass
+	<i> Set-ExecutionPolicy Bypass</i>
 </p>
 
 <p>5. Run <br/> <i> Save-Script -Name Get-WindowsAutoPilotInfo -Path C:\ </i>  
@@ -488,91 +488,72 @@ border: 1px solid #000000;
 -->
 <h2>Exercise 11: Set up Co-management</h2>
 
-<p>1. Connect to HYD-AD</p>
+<p>1. Connect to HYD-DC1</p>
 
-<p>2. Get and install the <a href="https://www.microsoft.com/download/details.aspx?id=47594" data-linktype="external">latest version of Azure AD Connect</a> (1.1.819.0 or higher).</p>
+<p>2. Launch Azure AD COnnect, and select Express settings </p>
 
 <p>3. Launch Azure AD Connect, and then select <strong>Configure</strong>.</p>
-
+<!--
 <p>4. On the <strong>Additional tasks</strong> page, select <strong>Configure device options</strong>, and then select <strong>Next</strong>.</p>
 
 <p>5. On the <strong>Overview</strong> page, select <strong>Next</strong>.</p>
-
-<p>6. On the <strong>Connect to Azure AD</strong> page, enter the credentials of a global administrator for your Azure AD tenant.</p>
-
-<p>7. On the <strong>Device options</strong> page, select <strong>Configure Hybrid Azure AD join</strong>, and then select <strong>Next</strong>.</p>
-
-<p>8. On the <strong>SCP</strong> page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select <strong>Next</strong>:</p>
-
-<p>a. Select the forest.</p>
-
-<p>b. Select the authentication service. If you have a federated domain, select AD FS server unless your organization has exclusively Windows 10 clients and you have configured computer/device sync or your organization is using <a href="https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso" data-linktype="external">SeamlessSSO</a>.</p>
-
-<p>c. Click <strong>Add</strong> to enter the enterprise administrator credentials.</p>
-
-<p>9. On the <strong>Device operating systems</strong> page, select the operating systems used by devices in your Active Directory environment, and then select <strong>Next</strong>.</p>
-
-<p>10. On the <strong>Federation configuration</strong> page, enter the credentials of your AD FS administrator, and then select <strong>Next</strong>.</p>
-
-<p>11. On the <strong>Ready to configure</strong> page, select <strong>Configure</strong>.</p>
-
-<p>12. On the <strong>Configuration complete</strong> page, select <strong>Exit</strong>.</p>
-
-<p>13. Open the Configuration Manager console &gt; Administration &gt; Overview &gt; Client Settings, and then edit the Default Client Settings.</p>
-
-<p>14. Select Cloud Services.</p>
-
-<p>15. On the Default Settings page, set Automatically register new Windows 10 domain joined devices with Azure Active Directory to = Yes.</p>
-
-<p>16. Select OK to save this configuration.</p>
-
-<p>17. In the Configuration Manager console, go to Administration &gt; Overview &gt; Cloud Services &gt; Co-management.</p>
-
-<p>18. On the Home tab, in the Manage group, select Configure co-management to open the Co-management Configuration Wizard.</p>
-
-<p>19. On the Subscription page, select Sign In and sign in to your Intune tenant, and then select Next.</p>
-
-<p>20. On the Enablement page, from the <i>Automatic enrollment in Intune</i> dropdown list, select one of the following options:</p>
-
-<p>21. Pilot - <i>(Recommended)</i> Members of the collection you specify are automatically enrolled into Intune and can then be co-managed. You specify the pilot collection on the <i>Staging</i> page of this wizard. This option allows you to test co-management on a subset of clients. You can then roll out co-management to additional clients using a phased approach.</p>
-
-<p>22. All - Co-management is enabled for all clients.</p>
-
-<p>23. On the Workloads page you can switch workloads from Configuration Manager to one of the following, and then when ready to continue, select Next.</p>
-
-<p>24. Pilot Intune - Switches a workload only for the devices in the Pilot group. You’ll assign a collection as the Pilot group on the next page of the wizard.</p>
-
-<p>25. Intune - Switches the associated workload for all co-managed Windows 10 devices.</p>
-
-<p>26. You don't need to switch any workloads at the time you enable co-management. You can revisit this configuration from the Configuration Manager console later, after co-management is configured.</p>
-
-<p>27. Before you switch a workload, make sure the corresponding workload in Intune is configured and deployed. Doing so keeps the workloads managed.</p>
-
-<p>28. On the Staging page, specify a collection to use for the Pilot collection, and then click Next. The collection you specify is used as part of your phased rollout of co-management. You can change the collections in the pilot group at any time from the co-management properties.</p>
-
-<p>29. On the Summary page, select Next, and then Close to complete the Wizard.</p>
-
-<p>30. In the Configuration Manager console, go to the Administration workspace, expand Cloud Services, and select the Co-management node.</p>
-
-<p>31. Select the co-management object, and then choose Properties in the ribbon.</p>
-
-<p>32. On the Enablement tab, copy the command line. Paste it into Notepad to save for the next process.</p>
-
-<p>33. Go to the <a href="https://portal.azure.com/" data-linktype="external">Azure portal</a>, and then open the Intune page.</p>
-
-<p>34. Select <strong>Client Apps</strong> &gt; <strong>Apps</strong> &gt; <strong>Add</strong>.</p>
-
-<p>35. Under <strong>Other</strong>, select <strong>Line-of-business app</strong>.</p>
-
-<p>36. Upload the <strong>ccmsetup.msi</strong> app package file. Find this file in the following folder on the Configuration Manager site server: <code>&lt;ConfigMgr installation directory&gt;\bin\i386</code>.</p>
-
-<p>37. After the app is updated, configure the app information with the command line that you copied from Configuration Manager.</p>
-<!--
-<p>38. Follow this article</p>
-
-<p>39. <a href="https://docs.microsoft.com/en-us/sccm/core/clients/manage/cmg/setup-cloud-management-gateway">https://docs.microsoft.com/en-us/sccm/core/clients/manage/cmg/setup-cloud-management-gateway</a> <br />
-</p>
 -->
+<p>4. On the <strong>Connect to Azure AD</strong> page, sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<p>5. On the AD DS page, type in <b> Corp.contoso.com\LabAdmin </b> and Password: <br/> <i> P@ssw0rd</i> <br/> and click Next.</p>
+<p>6. On the Azure AD Sign-in configuration page page, click the "Continue without matching all UPN suffixes to verified domains" option and click Next.</p>
+<p>7. On the Ready to configure page, click Install.</p>
+<p>8. Click Exit. </p>
+<p>9. Launch Azure AD Connect and select Configure. Click Configure device options.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/42%20azureaddevice.jpg" width="100%">
+<p>10. Click next, and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com. On the <strong>Device options</strong> page, select <strong>Configure Hybrid Azure AD join</strong>, and then select <strong>Next</strong>.</p>
+
+<p>11. On the <strong>SCP</strong> page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select <strong>Next</strong>:</p>
+<p>a. Select the forest.</p>
+<p>b. Select Azure Active Directory. </p>
+<p>c. Click <strong>Add</strong> to enter the enterprise administrator credentials. <br/> Labadmin <br/> <i>P@ssw0rd</i> </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/42%20azurescp.jpg" width="100%">
+<p>12. On the <strong>Device operating systems</strong> page, select "Windows 10 or later domain-joined devices" and click Next.</p>
+<p>13. On the Ready to configure page, select Configure. </p>
+<p>14. On he Configuration complete page, click Exit. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/43%20azureadcomplete.jpg" width="100%">
+
+<p>15. Connect to HYD-CM1 </p>
+<p>16. Open the <b> Configuration Manager </b> console &gt; Assets and Compliance &gt; Overview &gt; Device Collections, and click Create &gt; Create device collection.</p>
+<p>17. On the General pane, type "Intune Co-management Pilot" into the Name field. For Limit Collection, select Browser and select All systems. Click Next. </p>
+<p>18. On the Membership Rules pane, click next. Click OK on the popup.</p>
+<p>19. Click Next to complete the Device Collection creation wizard. Click Close</p>
+<p>20. In the <b> Configuration Manager </b> console &gt; Administration &gt; Overview &gt; Client Settings, and then edit the Default Client Settings by right clicking and select Properties.</p>
+
+<p>21. Select Cloud Services.</p>
+
+<p>22. On the Default Settings page, verify that "Automatically register new Windows 10 domain joined devices with Azure Active Directory" to = <b> Yes. </b></p>
+
+<p>23. Select OK to save this configuration.</p>
+
+<p>24. In the <b>Configuration Manager </b> console, go to Administration &gt; Overview &gt; Cloud Services &gt; <b>Co-management.</b></p>
+<p>25. On the Home tab, in the Manage group (top left of the console), select <b>Configure co-management</b> to open the Co-management Configuration Wizard.</p>
+<p>26. On the <b> Subscription </b> page, select Sign In and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com, and then select Next.</p>
+<p>27. On the <b> Enablement </b> page, from the <i>Automatic enrollment in Intune</i> dropdown list, select <b>All</b> and click next. </p>
+<p>21. On the <b> Workloads </b> page, slide every option to Intune except <b>Windows Update policies</b> and select Next.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/44%20workloads.jpg" width="100%">
+<p>22. On the <b> Staging </b> page, specify <b> Intune Co-management Pilot </b> to use for the collection, and then click Next.</p>
+<p>29. On the <b>Summary </b> page, select Next, and then Close to complete the Wizard.</p>
+<!--
+<p>30. In the Configuration Manager console, go to the Administration workspace, expand Cloud Services, and select the Co-management node.</p>
+<p>31. Select the co-management object, and then choose Properties in the ribbon.</p>
+<p>32. On the Enablement tab, copy the command line. Paste it into Notepad to save for the next process.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/45%20sccmenable.jpg" width="100%">
+-->
+<p>30. Navigate to <a href="https://portal.azure.com/">https://portal.azure.com</a> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<p>31. On the left navigation bar, click All Services &gt; Intune.<br />
+<p>32. Select <strong>Client Apps</strong> &gt; <strong>Apps</strong> &gt; <strong>Add</strong>.</p>
+<p>33. Under <strong>Other</strong>, select <strong>Line-of-business app</strong>.</p>
+<p>34. Select the folder icon and browse to C:\Program File\Microsoft Configuration Manager\bin\i386.Select the <strong>ccmsetup.msi</strong> app package file.</p>
+<p>35. Under App information, type in: <br/>Description: <b>ConfigMgr Client Setup Bootstrap</b><br/>Publisher: <b> Microsoft </b> </p>
+<p>36. Add the following Command-line arguments: <br/> <code> ccmsetup.exe /mp:CM1 /logon SMSSITECODE=CM1 FSP=CM1 </code>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/44%20workloads.jpg" width="100%">	
+<p>37. Click Add to upload the app to Intune. </p>
+<p>39. Click Ok and then click Add. Once the app is uploaded, select Putty release 0.70 from the Client Apps - Apps pane. Select Assignments, click <b> Add group </b>, select Assignment type <b> Required </b>, click Included Groups and select the <b> Autopilot Users </b> group.</p> 
 
 <!-- New Exercise
 -->
