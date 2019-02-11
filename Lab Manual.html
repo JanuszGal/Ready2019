@@ -855,9 +855,24 @@ Click <b> Next</b> twice. On the <B>System Role Selection</b> screen select <b>C
 
 <p>2. Start <b>Internet Explorer InPrivate mode</b>. Navigate to <code>https://portal.azure.com </code>and sign in with admin@<AzureDomainName>.onmicrosoft.com.</p>
 
-<p>3. On the left navigation bar, click All Services &gt; Intune. Click on <b>Devices</b> and select the Contoso-%rand4% device.  </p>
+<p>3. On the <b>Intune </b>pane, click <b>Device configuration </b>&gt; <b>Profiles </b>&gt; <b>+ Create profile</b>.</p>
 
-<p>4. Select <b>AutoPilot Reset</b></p>
+<p>4. On the <b>Create profile </b>pane, enter the following information: </p>
+<ul>
+<li> <b> Name</b>: <code>Windows 10 - Autopilot Reset</code></li>
+<li> <b> Platform</b>: Windows 10 and later</li>
+<li> <b> Profile type</b>: Device restrictions</li>
+<li> <b> Settings</b>: Device restrictions &gt; General &gt; Automatic Redeployment set to <b>Allow</b></li>
+</ul>
+
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/86%20reset.jpg" width="100%">
+<p> Click <b>OK</b> twice and click <b>Create</b>.</p>
+
+<p>5. On the <b>Windows 10 - Autopilot Reset</b> pane, click <b>Assignments</b>, click the <b>Select groups to include</b> option, and select the <b>Autopilot Users </b>group to assign the profile.</p>
+
+<p>6. On the left navigation bar, click All Services &gt; Intune. Click on <b>Devices</b> and select the Contoso-%rand4% device.  </p>
+
+<p>7. Select <b>AutoPilot Reset</b></p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/36%20autopilot%20reset.png" width="100%">
 <p>5. Connect to <b>HYD-Client5</b> to verify that <b>HYD-Client5</b> is currently being reset. </p>
 <b><br />
@@ -866,36 +881,31 @@ Click <b> Next</b> twice. On the <B>System Role Selection</b> screen select <b>C
 -->
 </b><h2>Exercise 16: Exporting settings as a .json file</h2>
 
-<p>1. Open a <b>new tab</b> and download the latest Intune PowerShell scripts from <code> https://github.com/microsoftgraph/powershell-intune-samples</code>. Save the <b>.zip file</b> into the <b>downloads</b> folder.<br/></p>
+<p>1. Open a <b>new tab</b> and download the latest Intune PowerShell scripts from <code> https://github.com/microsoftgraph/powershell-intune-samples</code>. Save the <b>.zip file</b> into the <b>downloads</b> folder.<br/>Right-click on the <b>powershell-intune-samples-master</b> zip file and select <b>Extract all &gt; Extract</b>.</p>
 
-<p>2. Start an <b>elevated PowerShell</b> session</p>
+<p>2. Press the <b>Windows key</b> and search for <code>powershell</code>. Select <b> PowerShell &gt; Run as Administrator</b> and accept the UAC popup.</p>
 
-<p>3. Run <br/> <code>Install-Module AzureAD</code></p>
+<p>3. Run <br/> <code>Install-Module AzureAD</code><br/> Type <code>A</code> to approve installing the module.</p>
 
-<p>4. Run <br/> <code>cd C:\PSHELL\Intune-scripts\DeviceConfiguration</code></p>
+<p>4. Run <br/> <code>cd C:\Users\LabAdmin\Downloads\powershell-intune-samples-master\powershell-intune-samples-master\DeviceConfiguration</code></p>
 
-<p>5. Run <code>C:\PSHELL\Intune-scripts\DeviceConfiguration\DeviceConfiguration_Export.ps1 </code></p>
+<p>5. Run <br/><code> DeviceConfiguration_Export.ps1 </code></p>
 
-<p>6. Sign-in using admin@<azureDomainName>.onmicrosoft.com</p>
+<p>6. Sign-in using admin@<azureDomainName>.onmicrosoft.com.</br> Select the checkbox to <b>consent on behalf of your organization</b> and click <b>Accept</b>.</p>
 
-<p>8. Send the contents of the Output folder to a compressed ZIP folder and upload to your Teams site or a OneDrive location for storage.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/37%20json%20export.png" width="100%">
+<p>8. Run <br/><code>C:\Users\LabAdmin\Downloads\powershell-intune-samples-master\powershell-intune-samples-master\DeviceConfiguration</code></p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/87%20powershell.jpg" width="100%">
 
-<p>9. Start an <b>elevated PowerShell</b> session</p>
-
-<p>10. Run <br/> <code>Install-Module AzureAD</code></p>
-
-<p>11. Run <br/> <code>cd C:\PSHELL\Intune-scripts\DeviceConfiguration</code></p>
-
-<p>12. Run <br/> <code>C:\PSHELL\Intune-scripts\DeviceConfiguration\DeviceConfiguration_Import_FromJSON.ps1</code></p>
+<p>12. Run <br/> <code>DeviceConfiguration_Import_FromJSON.ps1</code></p>
 
 <p>13. Sign-in using admin@<azureDomainName>.onmicrosoft.com</p>
 
-<p>14. Run <br/><code>"C:\PSHELL\Output\CustomDevicePolicy.json"</code></p>
-
+<p>14. Run <br/><code>C:\Users\LabAdmin\Downloads\powershell-intune-samples-master\powershell-intune-samples-master\DeviceConfiguration\Windows 10 - Autopilot Reset_11-02-2019-9-01-45.json</code></p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/87%20powershell2.jpg" width="100%">
 <p>15. Start <b>Internet Explorer InPrivate mode</b>. Navigate to <code>https://portal.azure.com </code>and sign in with admin@<AzureDomainName>.onmicrosoft.com.</p>
 
-<p>16. On the left navigation bar, click All Services &gt; Intune. Click on <b>Device Configuration</b> and verify the profile is duplicated.</p>
+<p>16. On the left navigation bar, click All Services &gt; Intune. Click on <b>Device Configuration</b> and verify the profiles are duplicated.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/88%20powershell3.jpg" width="100%">
 
 <!-- New Exercise
 -->
