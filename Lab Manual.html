@@ -9,8 +9,44 @@ border: 1px solid #000000;
 </style>
 <h1>Shifting to a Modern Desktop<br />
 </h1>
+<h2><a name="_Toc397503478"></a>Exercise 1: Add an Azure Subscription</h2>
 
-<h2><a name="_Toc397503478"></a>Exercise 1: Enable Intune Device Management</h2>
+<p>1. Connect to <b> HYD-CM1 </b></p>
+
+<p>2. Start <b> Internet Explorer InPrivate mode </b> by right clicking on the icon and selecting "Start InPrivate Browsing". Verify that external internet access is configured by navigating to <code>https://bing.com</code>.</p>
+
+<p>3. Navigate to <code>https://portal.azure.com</code> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+
+<p>4. On the left navigation bar, click <b> All Services </b> &gt; <b> Subscriptions. </b> <br />
+ </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/50%20subscription.jpg" width="100%">
+
+<br /> <br/>
+<p>5. Verify that there is no Azure subscription. Open a <b>new tab </b>in Internet explorer and navigate to: <code> https://www.microsoftazurepass.com </code>
+
+<p>6. On the <b> Ready to get started? </b> page, click <b> Start</b>. </p>
+
+<p>7. Click <b> Confirm Microsoft Account</b>. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/51%20verifypass.jpg" width="100%">
+
+<p>8. Click into the <b> Enter Promo code </b>box. In the top right (above this guide), click the <b>Resources </b> tab. Click the <b>T</b> button next to <b>Promo Code</b> to input the promo code.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/52%20resourcestab.jpg" width="100%">
+
+<p>9. Click <b>Claim Promo Code</b>.</p>
+
+<p>10. Once the page reloads, update the <b>email address</b> to admin@&lt;AzureDomainName&gt;.onmicrosoft.com. Click <b>Next</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/53%20azurepassstep3.jpg" width="100%">
+
+<p>11. Click the checkbox to <b>Agree</b> to the subscription agreement and click <b> Sign up</b>.</p>
+
+<p>12. Once the subscription is applied the page will open <b>portal.azure.com</b>. On the left navigation bar, click <b> All Services </b> &gt; <b> Subscriptions. </b> Verify that <b>Azure Pass - Sponsorship</b> is listed:<br />
+ </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/54%20subscription2.jpg" width="100%">
+
+
+<!--Next Exercise
+-->
+<h2><a name="_Toc397503478"></a>Exercise 2: Enable Intune Device Management</h2>
 
 <p>1. Connect to <b> HYD-CM1 </b></p>
 
@@ -23,9 +59,11 @@ border: 1px solid #000000;
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/1%20intune%20portal.png" width="100%">
 
 <br /> <br/>
-<p>5. Select the orange banner to open the <b> Mobile Device Management Authority </b> setting. If there is no orange banner, navigate to <b> Intune </b> &gt; <b> Device enrollment </b> to verify that Intune is set as the MDM authority. </p>
+<p>5. Select the orange banner to open the <b> Mobile Device Management Authority </b> setting. Under <b> Mobile Device Management Authority </b>, select <b> Intune MDM Authority. </b> 
+<br/><br/>
+<b>If there is no orange banner</b>, navigate to <b> Intune </b> &gt; <b> Device enrollment </b> to verify that Intune is set as the MDM authority.
 
-<p>6. Under <b> Mobile Device Management Authority </b>, select <b> Intune MDM Authority. </b> </p>
+</p>
 
 <p>7. On the left navigation bar, click <b> Azure Active Directory. </b> </p>
 
@@ -37,7 +75,7 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2>Exercise 2: Create Groups for Autopilot</h2>
+<h2>Exercise 3: Create Groups for Autopilot</h2>
 
 <p>1. On the left navigation bar, click <b>Azure Active Directory <b>&gt; </b>Groups </b>&gt; <b>All groups.</b></p>
 
@@ -91,11 +129,11 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2>Exercise 3: Configure Branding</h2>
+<h2>Exercise 4: Configure Branding</h2>
 
 <p>1. Open the tab with the <b>Azure portal</b>. On the left navigation bar, click <b>Azure Active Directory</b>.</p>
 
-<p>2. Select <b>Company branding</b>.</p>
+<p>2. Select <b>Company branding</b> &gt; <b> Default </b>.</p>
 
 <p>3. Configure the following with settings you choose for your lab:</p>
 <ul>
@@ -118,7 +156,7 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2>Exercise 4: Configure Autopilot Settings</h2>
+<h2>Exercise 5: Configure Autopilot Settings</h2>
 
 <p>1. On the left navigation bar, click <b>All Services</b> &gt; <b>Intune</b>.</p>
 
@@ -159,7 +197,7 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2>Exercise 5: Capture and Upload Device ID</h2>
+<h2>Exercise 6: Capture and Upload Device ID</h2>
 
 <p>1. Connect to <b>HYD-Client5</b>. Click start if the VM is turned off.</p>
 
@@ -197,7 +235,7 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-</b><h2>Exercise 6: Configure compliance and configuration settings in Intune</h2>
+</b><h2>Exercise 7: Configure compliance and configuration settings in Intune</h2>
 
 <p>13. Connect to <b>HYD-CM1</b></p>
 
@@ -282,7 +320,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2>Exercise 7: App deployment </h2>
+<h2>Exercise 8: App deployment </h2>
 
 <p>1. Connect to <b>HYD-CM1</b></p>
 
@@ -404,12 +442,12 @@ border: 1px solid #000000;
 <p>c. Command Line Arguments:<br/> <code>/package putty-0.70-installer.msi /quiet</code> </p>
 
 <p>39. Click <b>Ok </b>and then click <b>Add</b>. Once the app is uploaded, select <b>Putty release 0.70 </b>from the <b>Client Apps - Apps </b>pane. Select <b>Assignments</b>, click <b> Add group </b>, select Assignment type <b> Required </b>, click Included Groups and select the <b> Autopilot Users </b> group.</p>
-<p> Click <b>Ok twice </b>and click <b>Save </b></p> 
+<p> Click <b>Ok twice </b>and click <b>Save</b>.</p> 
 <br />
 
 <!-- New Exercise
 -->
-<h2>Exercise 8: Configure Office 365 Deployment</h2>
+<h2>Exercise 9: Configure Office 365 Deployment</h2>
 
 <p>1. On the left navigation bar, click <b>All Services</b> &gt; <b>Intune</b>.</p>
 
@@ -417,7 +455,7 @@ border: 1px solid #000000;
 
 <p>3. Under <b>App type</b>, select <b>Office 365 Suite </b> &gt; Windows 10.</p>
 
-<p>4. Select the following applications under Configure App Suite: <br/>
+<p>4. Select the following applications under <B>Configure App Suite</b>: <br/>
 <ul>
 <li>Excel</li>
 <li>OneDrive Desktop</li>
@@ -444,7 +482,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2>Exercise 9: Configure Updates</h2>
+<h2>Exercise 10: Configure Updates</h2>
 
 <p>1. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.</p>
 
@@ -467,7 +505,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2>Exercise 10: Autopilot a device</h2>
+<h2>Exercise 11: Autopilot a device</h2>
 
 <p>1. Connect to <b>HYD-Client5 </b> and <b>Restart</b> the machine by clicking the <b>Lightning bolt </b> &gt; <b>Power </b>&gt; <b>Reset/Reboot Machine</b>.</p>
 
@@ -485,7 +523,7 @@ border: 1px solid #000000;
 <p>7. Confirm the device is enrolling into Intune by seeing the <B>Enrollment Status Screen</b>:</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/34%20autopilot%20step%202.png" width="100%">
 
-<p>8. Click <b>Set up PIN</b> and when the Hello prompt pops up, click <b>X </b>and select <b>Skip for now</b>.</p>
+<p>8. Click <b>Set up PIN</b> and when the <b>Windows Hello </b>prompt pops up, click <b>X </b>and select <b>Skip for now</b>.</p>
 
 <p>9. Open the <b>Settings app </b>and navigate to <b>Accounts </b>&gt; <b>Access work or school</b>. Verify that the device is connected to your tenant name.</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/35%20autopilot%20step%203.png" width="100%">
@@ -494,77 +532,198 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2>Exercise 11: Set up Co-management</h2>
+<h2>Exercise 12: Set up Co-management with Cloud Management Gateway</h2>
 
-<p>1. Connect to HYD-DC1</p>
+<p>1. Connect to <b>HYD-DC1</b></p>
 
-<p>2. Launch Azure AD COnnect, and select Express settings </p>
+<p>2. Launch <b>Azure AD COnnect</b>. Approve the UAC prompt. Select <b>Use Express settings</b>.</p>
 
-<p>3. Select <strong>Configure</strong>.</p>
 <!--
 <p>4. On the <strong>Additional tasks</strong> page, select <strong>Configure device options</strong>, and then select <strong>Next</strong>.</p>
 
 <p>5. On the <strong>Overview</strong> page, select <strong>Next</strong>.</p>
 -->
-<p>4. On the <strong>Connect to Azure AD</strong> page, sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
-<p>5. On the AD DS page, type in <b> Corp.contoso.com\LabAdmin </b> and Password: <br/> <i> P@ssw0rd</i> <br/> and click Next.</p>
-<p>6. On the Azure AD Sign-in configuration page page, click the "Continue without matching all UPN suffixes to verified domains" option and click Next.</p>
-<p>7. On the Ready to configure page, click Install.</p>
-<p>8. Click Exit. </p>
-<p>9. Launch Azure AD Connect and select Configure. Click Configure device options.</p>
+<p>3. On the <strong>Connect to Azure AD</strong> page, sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<p>4. On the <b>AD DS </b>page, type in <code> Corp.contoso.com\LabAdmin </code> and Password: <code> P@ssw0rd</code> <br/> and click <b>Next</b>.</p>
+<p>5. On the <b>Azure AD Sign-in configuration </b>page, click the <b>Continue without matching all UPN suffixes to verified domains</b> option and click <b>Next</b>.</p>
+<p>6. On the <b>Ready to configure</b> page, click <b>Install</b>.</p>
+<p>7. Click <b>Exit</b>. </p>
+<p>8. Re-launch <b>Azure AD Connect </b> and select <b>Configure</b>. Click <b>Configure device options</b>.</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/42%20azureaddevice.jpg" width="100%">
-<p>10. Click next, and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com. On the <strong>Device options</strong> page, select <strong>Configure Hybrid Azure AD join</strong>, and then select <strong>Next</strong>.</p>
+<p>9. Click next, and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com. On the <strong>Device options</strong> page, select <strong>Configure Hybrid Azure AD join</strong>, and then select <strong>Next</strong>.</p>
 
-<p>11. On the <strong>SCP</strong> page, for each on-premises forest you want Azure AD Connect to configure the service connection point (SCP), do the following steps, and then select <strong>Next</strong>:</p>
-<p>a. Select the forest.</p>
-<p>b. Select Azure Active Directory. </p>
-<p>c. Click <strong>Add</strong> to enter the enterprise administrator credentials. <br/> Labadmin <br/> <i>P@ssw0rd</i> </p>
+<p>10. On the <strong>SCP</strong> page:</p>
+<p>a. Select corp.contoso.com.</p>
+<p>b. Select <b>Azure Active Directory</b> under Authentication Service. </p>
+<p>c. Click <strong>Add</strong> to enter the enterprise administrator credentials. <br/> <code>CORP\Labadmin </code><br/> <code>P@ssw0rd</code> </p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/42%20azurescp.jpg" width="100%">
-<p>12. On the <strong>Device operating systems</strong> page, select "Windows 10 or later domain-joined devices" and click Next.</p>
-<p>13. On the Ready to configure page, select Configure. </p>
-<p>14. On he Configuration complete page, click Exit. </p>
+<p>11. On the <strong>Device operating systems</strong> page, select <b>Windows 10 or later domain-joined devices</b> and click <b>Next</b>.</p>
+<p>12. On the <B>Ready to configure </b>page, select <b>Configure</b>. </p>
+<p>13. On the <b>Configuration complete </b>page, click <b>Exit</b>. </p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/43%20azureadcomplete.jpg" width="100%">
 
-<p>15. Connect to HYD-CM1 </p>
-<p>16. Open the <b> Configuration Manager </b> console &gt; Assets and Compliance &gt; Overview &gt; Device Collections, and click Create &gt; Create device collection.</p>
-<p>17. On the General pane, type "Intune Co-management Pilot" into the Name field. For Limit Collection, select Browser and select All systems. Click Next. </p>
-<p>18. On the Membership Rules pane, click next. Click OK on the popup.</p>
-<p>19. Click Next to complete the Device Collection creation wizard. Click Close</p>
-<p>20. In the <b> Configuration Manager </b> console &gt; Administration &gt; Overview &gt; Client Settings, and then edit the Default Client Settings by right clicking and select Properties.</p>
+<p>14. Connect to <b>HYD-CM1</b></p>
+<p>15. Open the <b> Configuration Manager </b> console &gt; Assets and Compliance &gt; Overview &gt; Device Collections, and click Create &gt; <b>Create device collection.</b></p>
+<p>16. On the General pane, type <code>Intune Co-management Pilot</code> into the Name field. For Limit Collection, select Browser and select All systems. Click Next. </p>
+<p>17. On the <b>Membership Rules </b>pane, click <b>Next</b>. Click <b>OK </b>on the popup.</p>
+<p>18. Verify the settings and click <b>Next </b> to complete the Device Collection creation wizard. Click <b>Close</b></p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/55%20sccmgroup.jpg" width="100%">
 
-<p>21. Select Cloud Services.</p>
 
-<p>22. On the Default Settings page, verify that "Automatically register new Windows 10 domain joined devices with Azure Active Directory" to = <b> Yes. </b></p>
-
-<p>23. Select OK to save this configuration.</p>
+<p>19. In the <b> Configuration Manager </b> console &gt; Administration &gt; Overview &gt; <b>Client Settings</b>, and then edit the <b>Default Client Settings </b>by right clicking and select <b>Properties</b>.</p>
+<p>21. Select <b>Cloud Services</b>.</p>
+<p>22. On the <b>Default Settings </b>page, verify that <b>Automatically register new Windows 10 domain joined devices with Azure Active Directory</b> to = <b> Yes. </b></p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/56%20clientsettings.jpg" width="100%">
+<p>23. Select <b>OK</b>to save this configuration.</p>
 
 <p>24. In the <b>Configuration Manager </b> console, go to Administration &gt; Overview &gt; Cloud Services &gt; <b>Co-management.</b></p>
-<p>25. On the Home tab, in the Manage group (top left of the console), select <b>Configure co-management</b> to open the Co-management Configuration Wizard.</p>
+<p>25. On the Home tab, in the Manage group <b>(top left of the console)</b>, select <b>Configure Co-management</b> to open the Co-management Configuration Wizard.</p>
 <p>26. On the <b> Subscription </b> page, select Sign In and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com, and then select Next.</p>
-<p>27. On the <b> Enablement </b> page, from the <i>Automatic enrollment in Intune</i> dropdown list, select <b>All</b> and click next. </p>
-<p>21. On the <b> Workloads </b> page, slide every option to Intune except <b>Windows Update policies</b> and select Next.</p>
+<p>27. On the <b> Enablement </b> page, from the <b>Automatic enrollment in Intune</b> dropdown list, select <b>All</b> and click <b>Next</b>. </p>
+<p>28. On the <b> Workloads </b> page, slide every option to Intune except <b>Windows Update policies</b> and select Next.</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/44%20workloads.jpg" width="100%">
-<p>22. On the <b> Staging </b> page, specify <b> Intune Co-management Pilot </b> to use for the collection, and then click Next.</p>
-<p>29. On the <b>Summary </b> page, select Next, and then Close to complete the Wizard.</p>
+<p>29. On the <b> Staging </b> page, specify <b> Intune Co-management Pilot </b> to use for the collection, and then click Next.</p>
+<p>30. On the <b>Summary </b> page, select Next, and then Close to complete the Wizard.</p>
 <!--
 <p>30. In the Configuration Manager console, go to the Administration workspace, expand Cloud Services, and select the Co-management node.</p>
 <p>31. Select the co-management object, and then choose Properties in the ribbon.</p>
 <p>32. On the Enablement tab, copy the command line. Paste it into Notepad to save for the next process.</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/45%20sccmenable.jpg" width="100%">
 -->
-<p>30. Navigate to <a href="https://portal.azure.com/">https://portal.azure.com</a> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
-<p>31. On the left navigation bar, click All Services &gt; Intune.<br />
-<p>32. Select <strong>Client Apps</strong> &gt; <strong>Apps</strong> &gt; <strong>Add</strong>.</p>
-<p>33. Under <strong>Other</strong>, select <strong>Line-of-business app</strong>.</p>
-<p>34. Select the folder icon and browse to C:\Program File\Microsoft Configuration Manager\bin\i386.Select the <strong>ccmsetup.msi</strong> app package file.</p>
-<p>35. Under App information, type in: <br/>Description: <b>ConfigMgr Client Setup Bootstrap</b><br/>Publisher: <b> Microsoft </b> </p>
-<p>36. Add the following Command-line arguments: <br/> <code> ccmsetup.exe /mp:CM1 /logon SMSSITECODE=CM1 FSP=CM1 </code>	
-<p>37. Click Add to upload the app to Intune. </p>
-<p>39. Click Ok and then click Add. Once the app is uploaded, select ConfigMgr Client Setup Bootstrap from the Client Apps - Apps pane. Select Assignments, click <b> Add group </b>, select Assignment type <b> Required </b>, click Included Groups and select the <b> Autopilot Users </b> group.</p> 
+<p>31. Open Internet Explorer InPrivate Mode and navigate to <code>https://portal.azure.com</code> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<p>32. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.<br />
+<p>33. Select <strong>Client Apps</strong> &gt; <strong>Apps</strong> &gt; <strong>Add</strong>.</p>
+<p>34. Under <strong>Other</strong>, select <strong>Line-of-business app</strong>.</p>
+<p>35. Select the folder icon and browse to <code>C:\Program Files\Microsoft Configuration Manager\bin\i386\ </code>.Select the <strong>ccmsetup.msi</strong> app package file.</p>
+<p>36. Under App information, type in: <br/>Description: <code>ConfigMgr Client Setup Bootstrap</code><br/>Publisher: <code> Microsoft </b> </code>
+<p>37. <b>Scroll down </b>in the App Information pane and add the following Command-line arguments: <br/> <code> ccmsetup.exe /mp:CM1 /logon SMSSITECODE=CM1 FSP=CM1 </code> </p>	
+<p>38. Click <b>Add</b> to upload the app to Intune. </p>
+<p>39. Click <b>Ok</b> and then click <b>Add</b>. Once the app is uploaded, select <b>ConfigMgr Client Setup Bootstrap</b> from the <b>Client Apps - Apps </b>pane. <br/> <br/>Select Assignments, click <b> Add group </b>, select Assignment type <b> Required </b>, click <b>Included Groups </b>and select the <b> Autopilot Users </b> group. <br/ <br/> Click <b> Save</b></p>
 
+<p>40. Open the <b>Configuration Manager console</b>. Select Administration &gt; Overview &gt; Cloud Services &gt; <b>Azure Services</b>. Click <b>Configure Azure Services</b> from the <b>Home</b> tab <b>(in the top left)</b>.</p>
+<p>41. Type <code>Contoso - Cloud Management</code> into the <b>Name</b> field. Click <b>Next</b>.</p>
+<p>42. On the <b>App Properties</b> page, select <b>Browse...</b> for <b>Web app</b>. Click <b>Create...</b> and enter <code>ConfigMgr Server Application</code> for the <b> Application Name</b>. </p>
+<p>43. Click <b> Sign-in</b> button and sign-in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com. Once <b>Signed in successfully!</b> shows on the page, click <b> OK</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/58%20sccmcloudapp.jpg" width="100%">
+<p>44.  Select <b>ConfigMgr Server Application</b> from the <b>Server App</b> page and click <b>OK</b>.</p>
+<p>45. On the <b>App Properties</b> page, select <b>Browse...</b> for <b>Native Client app</b>. Click <b>Create...</b> and enter <code>ConfigMgr Client Application</code> for the <b> Application Name</b>. </p>
+<p>46. Click <b> Sign-in</b> button and sign-in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com. Once <b>Signed in successfully!</b> shows on the page, click <b> OK</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/59%20sccmclientapp.jpg" width="100%">
+<p>47.  Select <b>ConfigMgr Client Application</b> from the <b>Client App</b> page and click <b>OK</b>.</p>
+<p>48. Click <b>Next</b>.</p>
+<p>49. On the <b>Configure Discovery Settings</b> page, click <b>Next</b>.</p>
+<p>50. Click <b>Next </b>on the <b>Summary </b>page to complete the Azure Services Wizard. Click <b>Close</b>.</p>
+
+
+<p>51. Connect to <b>HYD-DC1</b>.</p>
+<p>52. Click the <b>Windows key</b> and type <code>Certification</code> and select <b>Certification Authority</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/60%20cert1.jpg" width="100%">
+<p>53. In the <b>certsrv</b> console, expand <b>copr-DC1-CA</b>, right click on <b>Certificate Templates</b> and click <b>Manage</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/61%20cert2.jpg" width="100%">
+<p>54. In the <b>Certificate Temapltes Console</b>, right click on <b>Web Server</b> and click <b>Duplicate Template</b>. In the <b>Properties of New Template</b> pane, select the <b>General</b> tab and enter <code>SCCM Cloud Management Gateway</code> for the <b>Template display name</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/62%20cert3.jpg" width="100%">
+<p>55. Select the <b>Request Handling</b> tab and check the <b>Allow private key to be exported</b> option. </p>
+<p>56. Select the <b>Security</b> tab and click <b>Add</b>. Click <b>Object Types</b> and enable <b>Service Accounts</b> and <b>Computers</b> and click OK. Type in <code>CM1</code> and select both <b>CM1</b>. Click <b>Add</b>. Select CM1 on the <b>Security</b> tab and click the checkbox to <b>Allow</b> the <b>Enroll</b> permission.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/63%20cert4_2.jpg" width="100%">
+<p>57. Click <b>Apply</b> and click <b>OK</b>.</p>
+<p>58. Open the <b>certsrv</b> console. Right click on <b>Certificate templates</b> and click <b>New &gt; Certificate to issue </b>. Select <b>SCCM Cloud Management Gateway</b> and click <b>OK</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/64%20cert5.jpg" width="100%">
+
+
+<p>54. In the <b>Certificate Temapltes Console</b>, right click on <b>Workstation Authentication</b> and click <b>Duplicate Template</b>. In the <b>Properties of New Template</b> pane, select the <b>General</b> tab and enter <code>SCCM Client Certificate</code> for the <b>Template display name</b>.</p>
+<p>56. Click the <b>Security</b> tab. Select <b>Domain Computers</b> on and click the checkbox to <b>Allow</b> the <b>Autoenroll</b> and <b>Read</b> permissions.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/70%20cert11.jpg" width="100%">
+<p>57. Click <b>Apply</b> and click <b>OK</b>.</p>
+
+<p>58. Click on the <b>Search</b> icon and type <code>Group Policy Management </code> to open the Group Policy Management console. Expand <b>Forest: corp.contoso.com</b>. Right click on <b>CORP</b> and select <B> Create a GPO in this domain and link it here...</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/71%20cert12.jpg" width="100%">
+<p>59. In the <b>New GPO</b> window, type <code>Auto Enroll ConfigMgr Client Cert</code> and click <b>OK</b>. </p>
+<p>60. Right click on <b>Auto Enroll ConfigMgr Client Cert</b> and click <b> Edit</b>. Under <b>Computer Configuration</b>, expand <b>Policies</b> &gt; <b> Security Settings </b> &gt; <b> Public Key </b>. Right click on <b>Certificates Services Client - Auto-Enrollment Properties </b> and click <b> Properties</b>.</p>
+ <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/72%20cert13.jpg" width="100%">
+<p>61. In the <b>Configuration Model</b> dropdown, select <b>Enabled</b> Select <b>Review expired certificates, update pending certificates, and remove revoked certificates</b> and <b>Update certificates that use certificate templates</b> and click <b>OK</b>. 
+  <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/73%20cert14.jpg" width="100%">
+ 
+ 
+ 
+<!--
+<p>58. Open the <b>certsrv</b> console. Right click on <b>Certificate templates</b> and click <b>New &gt; Certificate to issue </b>. Select <b>SCCM Cloud Management Gateway</b> and click <b>OK</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/64%20cert5.jpg" width="100%">
+-->
+
+
+<p>59. Connect to <b>HYD-CM1</b>.</p>
+<p>60. Click the <b>Windows key</b> and type <code>mmc</code> to run <b>mmc</b>. In the <b>Console1 windows</b> select File &gt; Add/Remote Snap-in... <br/> <br/> Select <b>Certificates</b> and click <b>Add</b>. In the <b>Certificates snap-in</b> pop up, select <b>Computer account </b> and click <b>Finish</b>. <br/><br/>Click <b>Finish</b> again.</p>
+<p>61. Expand <b>Certificates (Local Computer)</b>. Expand <b>Personal</b> and click <b>Certificates</b>. Right click on <b>Certificates</b> and select <b> All Tasks &gt; Request New Certificate... </b></p> 
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/65%20cert6.jpg" width="100%">
+<p>62. Click <b>Next</b> twice.</p>
+<p>63. Click the <b>SCCM Cloud Management Gateway</b> checkbox on the <b>Request Certificates</b> page. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/66%20cert7.jpg" width="100%">
+<p>64. Click the <b>this certificate requires more information</b> link. In the <B>Subject name</b> type dropdown, select <b>Common name</b>. Type <code>contoso.cloudapp.com</code> and click <B>Add</b>. In the <b>Alternative name</b> type dropdown, select <b>DNS</b>. Type <code>contoso.cloudapp.com</code> and click <b>Add</b>. Click <b>Apply</b> and click</b>OK</b></p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/67%20cert8.jpg" width="100%">
+<p>65. Click <b>Enroll</b>.</p>
+<p>66. Click <b>Finish</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/68%20cert9.jpg" width="100%">
+<p>67. Right click on the <b>SCCM Cloud Management Gateway</b> certificate and click <b>Export</b>. </p>
+<p>68. In the Certificate Export Wizard, click <b>Next</b> three (3) times. Click <b>Browse...</b> and navigate to the <b>Downloads </b> folder. Click the <b>New folder</b> button to create a new folder, and type in the name <code>Certificate Export</code>. Click into the Certificate Export folder. Type <code>CloudDP</code> in the <b>File name</b> input and click <b>Save</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/69%20cert10.jpg" width="100%">
+<p>69. Click <b>Next</b> and click <b>Finish</b>. Click <b>OK</b> on the pop-up.</p>
+
+<p>67. Right click on the <b>SCCM Cloud Management Gateway</b> certificate and click <b>Export</b>. </p>
+<p>68. In the Certificate Export Wizard, click <b>Next</b>. On the <b>Export Private Key</b> page, click <b>Yes, export the private key</b>. Click <b>Next</b>. On the <b>Security</b> page, click the checkbox next to <b>Password</b>. Type in <code>P@ssw0rd</code> into both password input boxes. Click <b>Browse...</b> and navigate to the <b>Downloads </b> folder. Click the <b>New folder</b> button to create a new folder, and type in the name <code>Certificate Export</code>. Click into the Certificate Export folder. Type <code>CloudDPpfx</code> in the <b>File name</b> input and click <b>Save</b>.</p>
+
+<p>69. Click <b>Next</b> and click <b>Finish</b>. Click <b>OK</b> on the pop-up.</p>
+
+<p>67. Double click on the <b>contoso.corp.com</b> certificate. </p>
+<p>68. In the Certificate window, click <b>Certification Path</b>. Select <b>corp-DC1-CA</b> and click <b>View Certificate</b>. In the new Certificate window, click <b>Details</b> and <b>Copy to file</b>. 
+
+<p>69. In the Certificate Export Wizard, click <b>Next</b>. Click <b>Next</b> again. Click <b>Browse...</b> and navigate to the <b>Downloads </b> &gt; <b>Certificate Export</b> folder. Type <code>RootCACert</code> in the <b>File name</b> input and click <b>Save</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/74%20cert15.jpg" width="100%">
+<p>69. Click <b>Next</b> and click <b>Finish</b>. Click <b>OK</b> on the pop-up.</p>
+
+<p>70. Open <b>Internet Explorer</b> and navigate to <code>portal.azure.com</code>. </p>
+<p>71. In the Azure portal <b>search bar</b>, search for <b>Subscriptions</b> and select <b>Subscriptions</b>.</p>
+<p>72. Click on the <b>Azure Pass - Sponsorship</b> subscription. Click <b>Management certificates</b>. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/75%20cert16.jpg" width="100%">
+<p>73. Click <b> Upload</b>. Select the <b>Folder</b> icon and browse to <b>Downloads &gt; Certificate Export </b> folder. Select the <b>CloudDP.cer</b> and <b>RootaCACert</b> certificates.</b> Click <b>Upload</b>. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/81%20cmg4.jpg" width="100%">
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/76%20cert17.jpg" width="100%">
+<p>74. <b>Copy</b> the <b>Subscription ID</b> for the certificate.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/77%20cert18.jpg" width="100%">
+
+
+<p>75. Open <b>Configuration Manager</b> and navigate to <b>Administration &gt; Overview &gt; Cloud Services &gt; Cloud Management Gateway</b>. Right click on <b>Cloud Management Gateway</b> and select <b>Create Cloud Management Gateway</b></p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/78%20cmg1.jpg" width="100%">
+<p>76. In the Create Cloud Management Gateway Wizard, with admin@&lt;AzureDomainName&gt;.onmicrosoft.com. In the <b>Subscription ID</b> dropdown, select <b>Azure Pass - Sponsorship</b>. Click <b> Next</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/79%20cmg2.jpg" width="100%">
+<p>77. For <b>Certificate file</b> click <b>Browse</b> and navigate to the <b>Downloads &gt; Certificate Export </b> folder. Select the <b>CloudDPPfx</b> certificate and click open. Type <code>P@ssw0rd</code> and click OK to import the certificate. <br/></br> In the <b>Resource Group</b> section, select <b>Create new</b>. <br/></br> Un-check <B>Verify Client Certificate Revocation</b>. Click <b> Certificates</b> and click <b>Add...</b>. Select both the <b>CloudDP</b> and <b>RootCACert</b> certificates. Click <b> Open</b> and click <b>OK</b>.
+<br/><br/>Click <b>Next</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/80%20cmg3.jpg" width="100%">
+<p>78. Click <b>Next</b> twice to complete the <B>Cloud Management Gateway Wizard</b>.</p>
+
+<p>If that didn't work, delete the CMG and try again. </p>
+<p>76. In the Create Cloud Management Gateway Wizard, with admin@&lt;AzureDomainName&gt;.onmicrosoft.com. Select <b>Classic service deployment</b>. In the <b>Subscription ID</b> textbox paste the ID from step 74. For <b>Management Certificate</b>, browse to <b>Downloads &gt; Certificate Export</b> and select the <b>CloudDPPfx</b>certificate. Click <b>Next</b>. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/81%20cmg5.jpg" width="100%">
+<p>77. For <b>Certificate file</b> click <b>Browse</b> and navigate to the <b>Downloads &gt; Certificate Export </b> folder. Select the <b>CloudDPPfx</b> certificate and click open. Type <code>P@ssw0rd</code> and click OK to import the certificate. <br/></br> In the <b>Resource Group</b> section, select <b>Create new</b>. <br/></br> Un-check <B>Verify Client Certificate Revocation</b>. Click <b> Next </b></p>
+<p>78. Click <b>Next</b> twice to complete the <B>Cloud Management Gateway Wizard</b>.</p>
+
+<p>79. Navigate to <b> Administration &gt; Overview &gt; Site Configuration &gt; Servers and Site System Roles. </b> Right click on <b>\\CM1.corp-contoso.com</b> and select <b>Add Site System Roles</b>. <br/> <br/> 
+Click <b> Next</b> twice. On the <B>System Role Selection</b> screen select <b>Cloud Management Gateway Connection Point</b>. Click <b>Next</b> three times to complete the <b>Add Site System Roles Wizard</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/82%20cmg6.jpg" width="100%"> <br/> <br/>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/85%20cmg9.jpg" width="100%"> <br/> <br/>
+<p> Right click on <b>Management Point</b> and select <b> properties</b>. Select <b>HTTPS</b> and click <b>Allow Configuration Manager cloud management gateway traffic</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/84%20cmg8.jpg" width="100%">
+<p>80. Navigate to <b> Administration &gt; Overview &gt; Site Configuration &gt; Sites. </b> Right click on <b>CM1 - Contoso HQ Site</b> and select <b>Properties</b>. Select the <b>Client Computer Communication</b> tab and click the <b>Use PKI client certificate (client authentication capability) when available</b>. Un-select the <b>Clients check the certificate revocation list (CRL) for site systems</b>. <!--Select <b>Use Configuration Manager generated certificatesfor HTTP site-systems</b>. -->Click <b>OK</b>.</P>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/83%20cmg7_2.jpg" width="100%">
+
+
+<!--
+<p>40. In the Azure portal <b>search bar</b>, search for <b>Cloud services</b> and select <b> Cloud services (classic)</b>. Click <b>+ Add</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/57%20addcloud.jpg" width="100%">
+<p>41. </p>
+-->
 <!-- New Exercise
 -->
-<h2>Exercise 12: Install Intune Connector for Hybrid AD</h2>
+<h2>Exercise 13: Install Intune Connector for Hybrid AD</h2>
 <!--
 <p>2. In Intune, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> &gt; <strong>click Add</strong>.</p>
 <p>3. Click the link to download the connector.</p>
@@ -572,23 +731,23 @@ border: 1px solid #000000;
 -->
 <p>1. Open the Downloads folder and run the ODJConnectorBootstrapper.exe </p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/45%20connector.jpg" width="100%">
-<p>2. Click the check box and select Install. </p>
-<p>3. Approve the UAC elevation. </p>
-<p>4. At the end of setup, choose <strong>Configure now</strong>.</p>
+<p>2. Click the <b>check box </b> to agree to the license terms and select <b>Install</b>. </p>
+<p>3. <b>Approve</b> the UAC elevation. </p>
+<p>4. At the end of setup, choose <strong>Configure now</strong>. <b> Approve </b> the second UAC elevation.</p>
 <p>5. Choose <strong>Sign In</strong> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/46%20signinconnector.jpg" width="100%">
-<p>6. Open Internet Explorer and go to <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> and confirm the connection status is <strong>Active</strong>.</p>
+<p>6. Open <b>Internet Explorer </b> and navigate back to the <b>Intune </b>portal. Go to <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> and confirm the connection status is <strong>Active</strong>.</p>
 <br />
 
 <!-- New Exercise
 -->
-<h2>Exercise 13: Configure Autopilot for a hybrid AD device</h2>
+<h2>Exercise 14: Configure Autopilot for a hybrid AD device</h2>
 
 <p>1. In Intune, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Deployment Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
 
 <p>2. Create a new profile and enter the following settings:</p>
 <ul>
-<li> <b> Profile Name</b>: Autopilot Standard Users Hybrid</li>
+<li> <b> Profile Name</b>: <code>Autopilot Standard Users Hybrid</code></li>
 <li> <b> Deployment mode</b>: User-Driven</li>
 <li> <b> Join to Azure AD as</b>: Hybrid Azure AD joined (Preview)</li>
 <li> <b> Out-of-box-experience</b>: 
@@ -604,23 +763,23 @@ border: 1px solid #000000;
 <p> Click Create.<br /></p> 
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/48%20profilehybrid.jpg" width="100%">
 
-<p>3. Select the profile from the Deployment profiles pane. Click Assignments, and select the Autopilot Devices Group.</p>
-<p>4. In the Windows Autopilot deployment profiles pane, select the <b> Autopilot Standard Users </b> profile. Click Assignments, and select the ... icon to remove the Autopilot Devices Group. </p>
+<p>3. Select the <b>Autopilot Standard Users Hybrid</b> profile from the Deployment profiles pane. Click <b>Assignments</b>, and select the <b>Autopilot Devices </b>Group. Click <b>Save</b>.</p>
+<p>4. In the <b>Windows Autopilot deployment profiles</b> pane, select the <b> Autopilot Standard Users </b> profile. Click <b>Assignments</b>, and select the ... icon to remove the <b>Autopilot Devices</b> Group. Click <b>Save</b>.</p>
 
 <p>5. In Intune, choose <strong>Device configuration</strong> &gt; <strong>Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
 <p>6. Enter the following properties: </p>
-<p>a. <strong>Name</strong>: Windows 10 - Autopilot Hybrid AAD </p>
+<p>a. <strong>Name</strong>: <code>Windows 10 - Autopilot Hybrid AAD </code></p>
 <p>b. <strong>Platform</strong>: Choose <strong>Windows 10 and later</strong>.</p>
 <p>d. <strong>Profile type</strong>: Choose <strong>Domain Join (Preview)</strong>.</p>
 
-<p>7. Choose <strong>Settings</strong> and provide a <strong>Computer name prefix</strong>: Contoso, <strong>Domain name</strong>: corp.contoso.com</p>
+<p>7. Choose <strong>Settings</strong> and provide a <strong>Computer name prefix</strong>: <code>Contoso</code>, <strong>Domain name</strong>: <code>corp.contoso.com</code></p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/49%20odjprofile.jpg" width="100%">
 <p>8. Choose <strong>OK</strong> &gt; <strong>Create</strong>. </p>
-<p>9. Click Assignments click the Select groups to include option, and select the <b> Autopilot Users </b> group to assign the profile.</p>
-<p> Click save. </p>
+<p>9. Click <b>Assignments </b>click the <b>Select groups to include</b> option, and select the <b> Autopilot Users </b> group to assign the profile.</p>
+<p> Click <b>Save</b>. </p>
 <br />
 
-<h2>Exercise 14: Autopilot a Hybrid AAD device</h2>
+<h2>Exercise 15: Autopilot a Hybrid AAD device</h2>
 
 <p>1. Connect to HYD-Client6 and Restart the machine by clicking the lightning bolt &gt; Power &gt; Reset/Reboot Machine</p>
 
@@ -647,7 +806,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2>Exercise 15: Using Autopilot Reset</h2>
+<h2>Exercise 16: Using Autopilot Reset</h2>
 
 <p>16. Connect to HYD-SCCM</p>
 
@@ -659,7 +818,7 @@ border: 1px solid #000000;
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/36%20autopilot%20reset.png" width="100%">
 
 <b><br />
-</b><h2>Exercise 16: Exporting settings as a .json file</h2>
+</b><h2>Exercise 17: Exporting settings as a .json file</h2>
 
 <p>1. In order to successfully export your settings. Please download the latest Intune PowerShell scripts from <a href="https://github.com/microsoftgraph/powershell-intune-samples">here</a> (download and expand the ZIP file):</p>
 
@@ -696,7 +855,7 @@ border: 1px solid #000000;
 
 <p>17. Repeat process for each JSON file you want to import.</p>
 
-<h2>Exercise 17: Autopilot troubleshooting steps</h2>
+<h2>Exercise 18: Autopilot troubleshooting steps</h2>
 
 <p>1. Shift+F10 for CMD prompt</p>
 
