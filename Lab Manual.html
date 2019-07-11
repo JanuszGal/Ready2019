@@ -32,37 +32,7 @@ border: 1px solid #000000;
 <a href="#19">Exercise 19: Autopilot troubleshooting steps</a><br/>
 <h2><a name="1"></a>Exercise 1: Add an Azure Subscription</h2>
 -->
-<p>1. Connect to <b> HYD-CM1 </b></p>
 
-<p>2. Start <b> Internet Explorer InPrivate mode </b> by right clicking on the icon and selecting "Start InPrivate Browsing". Verify that external internet access is configured by navigating to <code>https://bing.com</code>.</p>
-
-<p>3. Navigate to <code>https://portal.azure.com</code> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
-
-<p>4. On the left navigation bar, click <b> All Services </b> &gt; <b> Subscriptions. </b> <br />
- </p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/50%20subscription.jpg" width="100%">
-
-<br /> <br/>
-<p>5. Verify that there is no Azure subscription. Open a <b>new tab </b>in Internet explorer and navigate to: <code> https://www.microsoftazurepass.com </code>
-
-<p>6. On the <b> Ready to get started? </b> page, click <b> Start</b>. </p>
-
-<p>7. Click <b> Confirm Microsoft Account</b>. </p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/51%20verifypass.jpg" width="100%">
-
-<p>8. Click into the <b> Enter Promo code </b>box. In the top right (above this guide), click the <b>Resources </b> tab. Click the <b>T</b> button next to <b>Promo Code</b> to input the promo code.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/52%20resourcestab.jpg" width="100%">
-
-<p>9. Click <b>Claim Promo Code</b>.</p>
-
-<p>10. Once the page reloads, update the <b>email address</b> to admin@&lt;AzureDomainName&gt;.onmicrosoft.com. Click <b>Next</b>.</p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/53%20azurepassstep3.jpg" width="100%">
-
-<p>11. Click the checkbox to <b>Agree</b> to the subscription agreement and click <b> Sign up</b>.</p>
-
-<p>12. Once the subscription is applied the page will open <b>portal.azure.com</b>. On the left navigation bar, click <b> All Services </b> &gt; <b> Subscriptions. </b> Verify that <b>Azure Pass - Sponsorship</b> is listed:<br />
- </p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/54%20subscription2.jpg" width="100%">
 
 
 <!--Next Exercise
@@ -267,7 +237,7 @@ border: 1px solid #000000;
 <p>15. Navigate to <code>https://portal.azure.com</code> and Sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
 
 <p>16. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.</p>
-
+<!--
 <p>17. Click <b>Device compliance</b> &gt; <b>Policies </b>&gt; <b>+ Create Policy.</b></p>
 
 <p>18. In the <b>Create Policy </b>pane, enter the following information:</p>
@@ -287,7 +257,7 @@ border: 1px solid #000000;
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/14%20assign%20compliance.png" width="100%">
 <br/>
 <p>21. Click <b>Save</b>.</p>
-
+-->
 <p>22. Back on the <b>Intune </b>pane, click <b>Device configuration </b>&gt; <b>Profiles </b>&gt; <b>+ Create profile</b>.</p>
 
 <p>23. On the <b>Create profile </b>pane, enter the following information: </p>
@@ -504,28 +474,7 @@ border: 1px solid #000000;
 
 <br />
 
-<!-- New Exercise
--->
-<h2><a name="10"></a>Exercise 10: Configure Updates</h2>
 
-<p>1. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.</p>
-
-<p>2. Click <b>Software updates </b>&gt; <b>Windows 10 Update Rings</b> &gt; <b>+Create</b>.</p>
-
-<p>3. Enter the following information on the <b>Create Update Ring </b>pane:</p>
-
-<p>a. Name: <code>Windows 10 - Semi-Annual Channel</code></p>
-
-<p>b. <b>Settings</b>: </p>
-
-<p>i. Servicing channel: <b>Semi-Annual Channel</b></p>
-<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/32%20win10%20channel.png" width="100%">
-
-<br/> 
-<p>4. Click <b>OK </b>then click <b>Create</b>. </p>
-
-<p>5. Click <b>Assignments</b>, click <b>Select groups to include </b> and select the <b> Autopilot Users </b> group. Click Save.</p>
-<br />
 
 <!-- New Exercise
 -->
@@ -555,6 +504,64 @@ border: 1px solid #000000;
 <br />
 
 <!-- New Exercise
+-->
+<div style="color:red"> 
+<!-- New Exercise
+-->
+<h2><a name="10"></a>Exercise 10: Configure Updates</h2>
+
+<p>1. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.</p>
+
+<p>2. Click <b>Software updates </b>&gt; <b>Windows 10 Update Rings</b> &gt; <b>+Create</b>.</p>
+
+<p>3. Enter the following information on the <b>Create Update Ring </b>pane:</p>
+
+<p>a. Name: <code>Windows 10 - Semi-Annual Channel</code></p>
+
+<p>b. <b>Settings</b>: </p>
+
+<p>i. Servicing channel: <b>Semi-Annual Channel</b></p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/32%20win10%20channel.png" width="100%">
+
+<br/> 
+<p>4. Click <b>OK </b>then click <b>Create</b>. </p>
+
+<p>5. Click <b>Assignments</b>, click <b>Select groups to include </b> and select the <b> Autopilot Users </b> group. Click Save.</p>
+<br />
+<h2><a name="12"></a>Exercise 11: Set up Azure Pass</h2>
+<p>1. Connect to <b> HYD-CM1 </b></p>
+
+<p>2. Start <b> Internet Explorer InPrivate mode </b> by right clicking on the icon and selecting "Start InPrivate Browsing". Verify that external internet access is configured by navigating to <code>https://bing.com</code>.</p>
+
+<p>3. Navigate to <code>https://portal.azure.com</code> and sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+
+<p>4. On the left navigation bar, click <b> All Services </b> &gt; <b> Subscriptions. </b> <br />
+ </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/50%20subscription.jpg" width="100%">
+
+<br /> <br/>
+<p>5. Verify that there is no Azure subscription. Open a <b>new tab </b>in Internet explorer and navigate to: <code> https://www.microsoftazurepass.com </code>
+
+<p>6. On the <b> Ready to get started? </b> page, click <b> Start</b>. </p>
+
+<p>7. Click <b> Confirm Microsoft Account</b>. </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/51%20verifypass.jpg" width="100%">
+
+<p>8. Click into the <b> Enter Promo code </b>box. In the top right (above this guide), click the <b>Resources </b> tab. Click the <b>T</b> button next to <b>Promo Code</b> to input the promo code.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/52%20resourcestab.jpg" width="100%">
+
+<p>9. Click <b>Claim Promo Code</b>.</p>
+
+<p>10. Once the page reloads, update the <b>email address</b> to admin@&lt;AzureDomainName&gt;.onmicrosoft.com. Click <b>Next</b>.</p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/53%20azurepassstep3.jpg" width="100%">
+
+<p>11. Click the checkbox to <b>Agree</b> to the subscription agreement and click <b> Sign up</b>.</p>
+
+<p>12. Once the subscription is applied the page will open <b>portal.azure.com</b>. On the left navigation bar, click <b> All Services </b> &gt; <b> Subscriptions. </b> Verify that <b>Azure Pass - Sponsorship</b> is listed:<br />
+ </p>
+<img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/54%20subscription2.jpg" width="100%">
+
+<!-- 
 -->
 
 <h2><a name="12"></a>Exercise 12: Set up AAD Connect</h2>
@@ -776,3 +783,4 @@ border: 1px solid #000000;
 <p>2. Press <b>Shift+F10</b> to open CMD prompt</p>
 <p>3. Type <code> eventvwr.msc</code> and locate the AutoPilot log (<b>Apps and Services -&gt; Microsoft -&gt; Windows -&gt; Provisioning Diagnostics Provider -&gt; AutoPilot</b></p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/89%20eventvwr.jpg" width="100%">
+</div>
