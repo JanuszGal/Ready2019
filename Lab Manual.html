@@ -37,9 +37,9 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2><a name="2"></a>Exercise 2: Enable Intune Device Management</h2>
+<h2><a name="2"></a>Exercise 1: Enable Intune Device Management</h2>
 
-<p>1. Connect to <b> HYD-CM1 </b></p>
+<p>1. Connect to <b> HYD-CLIENT5 </b></p>
 
 <p>2. Start <b> Internet Explorer InPrivate mode </b> by right clicking on the icon and selecting "Start InPrivate Browsing".</p>
 
@@ -66,7 +66,7 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2><a name="3"></a>Exercise 3: Create Groups for Autopilot</h2>
+<h2><a name="3"></a>Exercise 2: Create Groups for Autopilot</h2>
 
 <p>1. On the left navigation bar, click <b>Azure Active Directory <b>&gt; </b>Groups </b>&gt; <b>All groups.</b></p>
 
@@ -122,7 +122,7 @@ border: 1px solid #000000;
 -->
 <!--Next Exercise
 -->
-<h2><a name="4"></a>Exercise 4: Configure Branding</h2>
+<h2><a name="4"></a>Exercise 3: Configure Branding</h2>
 
 <p>1. Open the tab with the <b>Azure portal</b>. On the left navigation bar, click <b>Azure Active Directory</b>.</p>
 
@@ -149,7 +149,7 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2><a name="5"></a>Exercise 5: Configure Autopilot Settings</h2>
+<h2><a name="5"></a>Exercise 4: Configure Autopilot Settings</h2>
 
 <p>1. On the left navigation bar, click <b>All Services</b> &gt; <b>Intune</b>.</p>
 
@@ -190,7 +190,7 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-<h2><a name="6"></a>Exercise 6: Capture and Upload Device ID</h2>
+<h2><a name="6"></a>Exercise 5: Capture and Upload Device ID</h2>
 
 <p>1. Connect to <b>HYD-Client5</b>. Click start if the VM is turned off.</p>
 
@@ -228,15 +228,16 @@ border: 1px solid #000000;
 
 <!--Next Exercise
 -->
-</b><a name="7"></a><h2>Exercise 7: Configure compliance and configuration settings in Intune</h2>
-
+</b><a name="7"></a><h2>Exercise 6: Configure compliance and configuration settings in Intune</h2>
+<!-- 
 <p>13. Connect to <b>HYD-CM1</b></p>
+-->
 
-<p>14. Start <b>Internet Explorer InPrivate mode</b>.</p>
+<p>11. Start <b>Internet Explorer InPrivate mode</b>.</p>
 
-<p>15. Navigate to <code>https://portal.azure.com</code> and Sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
+<p>12. Navigate to <code>https://portal.azure.com</code> and Sign in with admin@&lt;AzureDomainName&gt;.onmicrosoft.com.</p>
 
-<p>16. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.</p>
+<p>13. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.</p>
 <!--
 <p>17. Click <b>Device compliance</b> &gt; <b>Policies </b>&gt; <b>+ Create Policy.</b></p>
 
@@ -258,16 +259,16 @@ border: 1px solid #000000;
 <br/>
 <p>21. Click <b>Save</b>.</p>
 -->
-<p>22. Back on the <b>Intune </b>pane, click <b>Device configuration </b>&gt; <b>Profiles </b>&gt; <b>+ Create profile</b>.</p>
+<p>4. On the <b>Intune </b>pane, click <b>Device configuration </b>&gt; <b>Profiles </b>&gt; <b>+ Create profile</b>.</p>
 
-<p>23. On the <b>Create profile </b>pane, enter the following information: </p>
+<p>5. On the <b>Create profile </b>pane, enter the following information: </p>
 <ul>
 <li> <b> Name</b>: <code>Windows 10 - BitLocker</code></li>
 <li> <b> Platform</b>: Windows 10 and later</li>
 <li> <b> Profile type</b>: Custom</li>
 </ul>
 
-<p>24. Under settings, click <b>add </b>and add the 2 following BitLocker CSP settings:</p>
+<p>6. Under settings, click <b>add </b>and add the 2 following BitLocker CSP settings:</p>
 <ul>
 <li> <b> <code>BitLocker Standard User Encryption </code></b></li>
 <ul>
@@ -289,12 +290,12 @@ border: 1px solid #000000;
 
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/16%20standard%20user%20encryption%20warning.png" width="100%">
 
-<p>25. On the <b>Create profile </b>pane click <b>Create</b>.</p>
+<p>7. On the <b>Create profile </b>pane click <b>Create</b>.</p>
 
-<p>26. Select the "Windows 10 - BitLocker" profile. Click <b>Assignments</b>, click the <b>Select groups to include</b> option, and select the <b>Autopilot Users </b>group to assign the profile.</p>
+<p>8. Select the "Windows 10 - BitLocker" profile. Click <b>Assignments</b>, click the <b>Select groups to include</b> option, and select the <b>Autopilot Users </b>group to assign the profile.</p>
 <p> Click save. </p> 
 
-<p>27. Click <b>+ Create profile</b>. On the Create profile pane, enter the following information: </p>
+<p>9. Click <b>+ Create profile</b>. On the Create profile pane, enter the following information: </p>
 
 <p>a. <b>Name</b>: <code>Windows 10 - OneDrive</code></p>
 
@@ -302,20 +303,20 @@ border: 1px solid #000000;
 
 <p>c. <b>Profile type</b>: Administrative Templates (Preview)</p>
 
-<p>28. Click <b>Create</b>.</p>
+<p>10. Click <b>Create</b>.</p>
 
-<p>29. On the <b>Windows 10 - OneDrive </b>device profile pane, select <b>settings</b>. Type <code>Enable OneDrive</code> into the search bar and select <b>Enable OneDrive Files On-Demand.</b> Click <b>Enabled</b>.</p>
+<p>11. On the <b>Windows 10 - OneDrive </b>device profile pane, select <b>settings</b>. Type <code>Enable OneDrive</code> into the search bar and select <b>Enable OneDrive Files On-Demand.</b> Click <b>Enabled</b>.</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/17%20admx%20onedrive.png" width="100%">
 
-<p>30. Click <b>Assignments</b>, click the <b>Select groups to include</b> option, and select the <b>Autopilot Users </b>group to assign the profile.</p>
+<p>12. Click <b>Assignments</b>, click the <b>Select groups to include</b> option, and select the <b>Autopilot Users </b>group to assign the profile.</p>
 <p> Click <b>save</b>. </p>
 <br />
 
 <!-- New Exercise
 -->
-<h2><a name="8"></a>Exercise 8: App deployment </h2>
+<h2><a name="8"></a>Exercise 7: App deployment </h2>
 
-<p>1. Connect to <b>HYD-CM1</b></p>
+<p>1. Connect to <b>HYD-CLIENT5</b></p>
 
 <p>2. On the left navigation bar, click <b>All Services </b>&gt; <b>Intune</b>.</p>
 
@@ -347,7 +348,7 @@ border: 1px solid #000000;
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/22%20xbox%20assignments.png" width="100%">
 <br />
 <p> Click <b>save</b>. </p>
-
+<!--
 <p>14. Create a <b>new tab </b>in Internet Explorer and click into the <b>address bar</b>. Enter the following link: <code>https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool</code></p>
 
 <p>15. Click the <b>green dropdown</b> labeled <B>Clone or download</b> and then click <b>Download ZIP</b>. Save the .zip file in the <b>Downloads </b>folder.</p>
@@ -355,6 +356,7 @@ border: 1px solid #000000;
 <!--
 <p>16. Create a new tab in Internet Explorer and click into the address bar. Enter the following link: <a href="https://go.skype.com/windows.desktop.download">https://go.skype.com/windows.desktop.download</a> <br/> This will begin a download for Skype (in .exe format). Save Skype in the downloads folder.</p>
 -->
+<!--
 <p>17. In the <b>downloads folder</b>, <b>unzip </b>the Intune-Win32 app packaging tool. </p>
 	
 <p>18. Create a <b>new folder </b>in the <b>Downloads directory </b>called <code>Apps</code>. Copy the <b>Skype.exe</b> into this folder.</p>
@@ -421,13 +423,15 @@ border: 1px solid #000000;
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/28%20powerbi%20download.png" width="100%">
 -->
 
-<p>36. Back in the <b>Intune portal</b>, select <b>Client Apps </b>&gt; <b>Apps </b>and click <b>+Add</b>. </p>
+<p>14. Back in the <b>Intune portal</b>, select <b>Client Apps </b>&gt; <b>Apps </b>and click <b>+Add</b>. </p>
 <br/> <br/>
+<!--
 <p><b style="color: red"> OPTIONAL </b></p>
-<p>37. For <b>app type</b>, select <b>Line-of-business app</b>. In the app package file section, open the <b>Downloads folder</b> and select  <b>putty-0.70-installer.msi</b>.</p>
+-->
+<p>15. For <b>app type</b>, select <b>Line-of-business app</b>. In the app package file section, open the <b>Downloads folder</b> and select  <b>putty-0.70-installer.msi</b>.</p>
 <img src="https://raw.githubusercontent.com/JanuszGal/Ready2019/master/37%20putty%20upload.jpg" width="100%">
 
-<p>38. Under <b>App information</b>, enter the following information:</p>
+<p>16. Under <b>App information</b>, enter the following information:</p>
 
 <p>a. Description: <code>Putty </code></p>
 
@@ -435,13 +439,13 @@ border: 1px solid #000000;
 
 <p>c. Command Line Arguments:<br/> <code>/package putty-0.70-installer.msi /quiet</code> </p>
 
-<p>39. Click <b>Ok </b>and then click <b>Add</b>. Once the app is uploaded, select <b>Putty release 0.70 </b>from the <b>Client Apps - Apps </b>pane. Select <b>Assignments</b>, click <b> Add group </b>, select Assignment type <b> Required </b>, click Included Groups and select the <b> Autopilot Users </b> group.</p>
+<p>17. Click <b>Ok </b>and then click <b>Add</b>. Once the app is uploaded, select <b>Putty release 0.70 </b>from the <b>Client Apps - Apps </b>pane. Select <b>Assignments</b>, click <b> Add group </b>, select Assignment type <b> Required </b>, click Included Groups and select the <b> Autopilot Users </b> group.</p>
 <p> Click <b>Ok twice </b>and click <b>Save</b>.</p> 
 <br />
 
 <!-- New Exercise
 -->
-<h2><a name="9"></a>Exercise 9: Configure Office 365 Deployment</h2>
+<h2><a name="9"></a>Exercise 8: Configure Office 365 Deployment</h2>
 
 <p>1. On the left navigation bar, click <b>All Services</b> &gt; <b>Intune</b>.</p>
 
@@ -478,7 +482,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2><a name="11"></a>Exercise 11: Autopilot a device</h2>
+<h2><a name="11"></a>Exercise 9: Autopilot a device</h2>
 
 <p>1. Connect to <b>HYD-Client5 </b> and <b>Restart</b> the machine by clicking the <b>Lightning bolt </b> &gt; <b>Power </b>&gt; <b>Reset/Reboot Machine</b>.</p>
 
@@ -505,6 +509,17 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 <div style="color:red"> 
 <!-- New Exercise
 -->
@@ -564,7 +579,7 @@ border: 1px solid #000000;
 <!-- 
 -->
 
-<h2><a name="12"></a>Exercise 12: Set up AAD Connect</h2>
+<h2><a name="12"></a>Exercise 11: Set up AAD Connect</h2>
 
 <p>1. Connect to <b>HYD-DC1</b></p>
 
@@ -599,7 +614,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2><a name="13"></a>Exercise 13: Install Intune Connector for Hybrid AAD</h2>
+<h2><a name="13"></a>Exercise 12: Install Intune Connector for Hybrid AAD</h2>
 <!--
 <p>2. In Intune, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Intune Connector for Active Directory (Preview)</strong> &gt; <strong>click Add</strong>.</p>
 <p>3. Click the link to download the connector.</p>
@@ -618,7 +633,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2><a name="14"></a>Exercise 14: Configure Autopilot for a Hybrid AAD device</h2>
+<h2><a name="14"></a>Exercise 13: Configure Autopilot for a Hybrid AAD device</h2>
 
 <p>1. In Intune, choose <strong>Device enrollment</strong> &gt; <strong>Windows enrollment</strong> &gt; <strong>Deployment Profiles</strong> &gt; <strong>Create Profile</strong>.</p>
 
@@ -656,7 +671,7 @@ border: 1px solid #000000;
 <p> Click <b>Save</b>. </p>
 <br />
 
-<h2><a name="15"></a>Exercise 15: Capture and Upload Device ID - Hybrid AAD device</h2>
+<h2><a name="15"></a>Exercise 14: Capture and Upload Device ID - Hybrid AAD device</h2>
 <p>1. Connect to <B>HYD-Client6</b>.
 <p>2. Press <b>Shift+F10</b> to open CMD prompt. </p>
 <p>3. Run <br/><code>netsh interface ipv4 show config</code><br/> to verify the settings of the network adapter.</p>
@@ -693,7 +708,7 @@ border: 1px solid #000000;
 <p><b style="color: red;">OPTIONAL </b></p>
 <p>14. Navigate to <b>Intune &gt; Device enrollment </b>. Select <b>Enrollment Status Page (Preview)</b>. On the Enrollment Status Page pane, select the <b>Default profile</b>. Click <b>Settings</b>, then select <b>No</b> for <b>Block device use until all apps and profiles are installed</b>.</p>	
 	
-<h2><a name="16"></a>Exercise 16: Autopilot a Hybrid AAD device</h2>
+<h2><a name="16"></a>Exercise 15: Autopilot a Hybrid AAD device</h2>
 
 <p>1. Connect to <b>HYD-Client6 </b> and <b>Restart</b> the machine by clicking the <b>Lightning bolt </b> &gt; <b>Power </b>&gt; <b>Reset/Reboot Machine</b>.</p>
 
@@ -720,7 +735,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2><a name="17"></a>Exercise 17: Using Autopilot Reset</h2>
+<h2><a name="17"></a>Exercise 16: Using Autopilot Reset</h2>
 
 <p>1. Connect to <b>HYD-CM1</b></p>
 
@@ -750,7 +765,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-</b><h2><a name="18"></a>Exercise 18: Exporting settings as a .json file</h2>
+</b><h2><a name="18"></a>Exercise 17: Exporting settings as a .json file</h2>
 
 <p>1. Open a <b>new tab</b> and download the latest Intune PowerShell scripts from <code> https://github.com/microsoftgraph/powershell-intune-samples</code>. Save the <b>.zip file</b> into the <b>downloads</b> folder.<br/>Right-click on the <b>powershell-intune-samples-master</b> zip file and select <b>Extract all &gt; Extract</b>.</p>
 
@@ -778,7 +793,7 @@ border: 1px solid #000000;
 
 <!-- New Exercise
 -->
-<h2><a name="19"></a>Exercise 19: Autopilot troubleshooting steps</h2>
+<h2><a name="19"></a>Exercise 18: Autopilot troubleshooting steps</h2>
 <p>1. Connect to <b>HYD-Client5</b></p>
 <p>2. Press <b>Shift+F10</b> to open CMD prompt</p>
 <p>3. Type <code> eventvwr.msc</code> and locate the AutoPilot log (<b>Apps and Services -&gt; Microsoft -&gt; Windows -&gt; Provisioning Diagnostics Provider -&gt; AutoPilot</b></p>
